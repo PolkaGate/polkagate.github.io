@@ -1,17 +1,18 @@
 import "./App.css";
 import { Avatar, Box, Grid, Typography, Button } from "@mui/material";
 import React, { useCallback } from "react";
-import Features from './Features';
-import Team from './Team';
-import Footer from './Footer';
+import Features from "./Features";
+import Team from "./Team";
+import Footer from "./Footer";
 
 function App() {
   const handleOpenFirefox = useCallback(() => {
     window.open(
-      'https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/',
+      "https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/",
       "_blank"
     );
   }, []);
+
   return (
     <>
       <Grid container justifyContent="center" sx={{ pt: 5 }}>
@@ -35,27 +36,24 @@ function App() {
               width: 2245,
               maxHeight: { xs: 60, md: 303 },
               maxWidth: { xs: 224, md: 1123 },
-              pt: 3,
+              pt: 5,
             }}
             alt="intro"
             src="images/intro.png"
           />
         </Grid>
-        <Grid item xs={12} sx={{ px: 6 }}>
+        <Grid item xs={12} sx={{ px: 8 }}>
           <Typography align="center" variant="subtitle1" sx={{ pt: 4 }}>
-            Polkadot js plus is actually Polkadot js extension, plus new features.
-            It is a user-friendly wallet to interact with the Polkadot/Substrate
-            based blockchains through a browser.
-          </Typography>
-          <Typography align="center" variant="body2" sx={{ pt: 2 }}>
-            It allows users to access their account(s), which can also be used to
-            interact with decentralized apps.
+            Polkadot js plus is actually Polkadot js extension, plus new
+            features. It is a user-friendly wallet to interact with the
+            Polkadot/Substrate based blockchains through a browser.   It allows users to access their account(s), which can also be used
+            to interact with decentralized apps.
           </Typography>
         </Grid>
         <Button
           color="primary"
           variant="contained"
-          sx={{ mt: 3 }}
+          sx={{ my: 5 }}
           startIcon={
             <Avatar
               alt="plus"
@@ -67,6 +65,7 @@ function App() {
         >
           Download for firefox
         </Button>
+       
       </Grid>
       <Features />
       <Team />
