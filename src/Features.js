@@ -1,59 +1,46 @@
-import "./App.css";
-import { Avatar, Box, Grid, Typography, Button } from "@mui/material";
-import React, { useCallback } from "react";
+import { Grid, Typography } from "@mui/material";
+import React from "react";
 import {
   CenterFocusWeak as CenterFocusWeakIcon,
   AutoAwesome as AutoAwesomeIcon,
   Api as ApiIcon,
 } from "@mui/icons-material";
 function Features() {
+  const Feature = ({ icon, title, text }) => (
+    <Grid item md={4} sx={{ px: 4 }}>
+      <Grid item>{icon}</Grid>
+      <Grid item sx={{ fontSize: 20, fontWeight: 600, pt: 1 }}>
+        {title}
+      </Grid>
+      <Typography variant="body2" pt={1}>
+        {text}
+      </Typography>
+    </Grid>
+  );
+
   return (
-    <Grid container spacing={2} sx={{ p: " 30px", height: 300 }}>
-      <Grid item xs={4}>
-        <Grid item>
-          <CenterFocusWeakIcon color="warning" sx={{ fontSize: 50 }} />
-        </Grid>
-        <Grid item sx={{ fontSize: 20, fontWeight: 600 }}>
-          Simple User Interface
-        </Grid>
-        <Grid
-          item
-          sx={{ fontSize: 15, fontWeight: 400, pt: 1, lineHeight: 1.6 }}
-        >
-          Feel comfortable, focusing on what's important, by creating a stylised
-          but instantly recognisable UI
-        </Grid>
-      </Grid>
-      <Grid item xs={4}>
-        <Grid item>
-          <AutoAwesomeIcon color="success" sx={{ fontSize: 50 }} />
-        </Grid>
-        <Grid item sx={{ fontSize: 20, fontWeight: 600 }}>
-          Efficient User Expereince
-        </Grid>
-        <Grid
-          item
-          sx={{ fontSize: 15, fontWeight: 400, pt: 1, lineHeight: 1.6 }}
-        >
-          Efficiently and quickly get most of the common functionalities of the
-          Kusama/Polkadot blockchain done
-        </Grid>
-      </Grid>
-      <Grid item xs={4}>
-        <Grid item>
-          <ApiIcon color="error" sx={{ fontSize: 50 }} />
-        </Grid>
-        <Grid item sx={{ fontSize: 20, fontWeight: 600 }}>
-          Agile Developments
-        </Grid>
-        <Grid
-          item
-          sx={{ fontSize: 15, fontWeight: 400, pt: 1, lineHeight: 1.6 }}
-        >
-          Analyzing circumstances and user needs and adapt to the constantly
-          evolving blockchain technology
-        </Grid>
-      </Grid>
+    <Grid container spacing={2} sx={{ px: "30px", py: "60px" }}>
+      <Feature
+        icon={<CenterFocusWeakIcon color="warning" sx={{ fontSize: 50 }} />}
+        title={"Simple User Interface"}
+        text={
+          "Feel comfortable, focusing on what's important, by creating a stylised but instantly recognisable UI"
+        }
+      />
+      <Feature
+        icon={<AutoAwesomeIcon color="success" sx={{ fontSize: 50 }} />}
+        title={" Efficient User Expereince"}
+        text={
+          "Efficiently and quickly get most of the common functionalities done on Kusama/Polkadot blockchains"
+        }
+      />
+      <Feature
+        icon={<ApiIcon color="error" sx={{ fontSize: 50 }} />}
+        title={"  Agile Developments"}
+        text={
+          "Analyzing circumstances and user needs and adapt to the constantly evolving blockchain technology"
+        }
+      />
     </Grid>
   );
 }

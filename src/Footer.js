@@ -1,4 +1,3 @@
-import "./App.css";
 import { Avatar, Stack, Box, Grid, Typography, Button } from "@mui/material";
 import React, { useCallback } from "react";
 import { SocialIcon } from "react-social-icons";
@@ -9,7 +8,7 @@ function Footer() {
       container
       spacing={2}
       justifyContent="center"
-      sx={{ p: " 30px", color: "white", bgcolor: "#172026", height: 100 }}
+      sx={{ p: " 30px", color: "white", bgcolor: "#172026" }}
     >
       <Stack
         direction="row"

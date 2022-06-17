@@ -1,123 +1,56 @@
-import "./App.css";
 import { Avatar, Stack, Box, Grid, Typography, Button } from "@mui/material";
 import React, { useCallback } from "react";
-
+import Member from "./Member";
 function Team() {
   return (
     <Grid
       container
       spacing={2}
       justifyContent="center"
-      sx={{ p: " 30px", color: "white", bgcolor: "#e6007a", height: 400 }}
+      sx={{ px: " 30px", py: "50px", color: "white", bgcolor: "#e6007a" }}
     >
-      <Grid item xs={12}>
-      <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={15}
-      >
-        <Stack
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={1}
+      <Grid item xs={12} sx={{ textAlign: "center", pb: 2 }}>
+        <Typography
+          style={{ display: "inline-block" }}
+          variant="h5"
+          fontWeight={700}
         >
-          <Avatar
-            alt="Kami"
-            src="/images/avatar/kami.jpg"
-            sx={{ width: 100, height: 100 }}
-          />
-          <Typography align="center" variant="body1">
-            CEO / Blockchain engineer
-          </Typography>
-        </Stack>
-
-        <Stack
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={1}
-        >
-          <Avatar
-            alt="Amir"
-            src="/images/avatar/amir.png"
-            sx={{ width: 100, height: 100 }}
-          />
-          <Typography align="center" variant="body1">
-            Test engineer
-          </Typography>
-        </Stack>
-
-        <Stack
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={1}
-        >
-          <Avatar
-            alt="John Doe"
-            // src="/images/avatar/kami.jpg"
-            sx={{ width: 100, height: 100 }}
-          />
-          <Typography align="center" variant="body1">
-            UI/UX designer
-          </Typography>
-        </Stack>
-        <Stack
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={1}
-        >
-          <Avatar
-            alt="John Doe"
-            // src="/images/avatar/kami.jpg"
-            sx={{ width: 100, height: 100 }}
-          />
-          <Typography align="center" variant="body1">
-            Rust developer
-          </Typography>
-        </Stack>
-      </Stack>
+         Meet Our Team
+        </Typography>
+        <Typography style={{ display: "inline-block" }} variant="body1">
+          <p>{"{We are hiring}"}</p>
+        </Typography>
       </Grid>
-      <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={15}
-      >
-        <Stack
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={1}
-        >
-          <Avatar
-            alt="John Doe"
-            // src="/images/avatar/kami.jpg"
-            sx={{ width: 100, height: 100 }}
-          />
-          <Typography align="center" variant="body1">
-            API developer
-          </Typography>
-        </Stack>
-        <Stack
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={1}
-        >
-          <Avatar
-            alt="John Doe"
-            // src="/images/avatar/kami.jpg"
-            sx={{ width: 100, height: 100 }}
-          />
-          <Typography align="center" variant="body1">
-            Full stack developer
-          </Typography>
-        </Stack>
-      </Stack>
+
+      <Member
+        src={"/images/avatar/kami.jpg"}
+        name={"Dr. Kami Ekbatanifard"}
+        title={"Founder - CEO"}
+        link={"ekbatanifard"}
+      />
+      <Member
+        src={"/images/avatar/morteza.jpg"}
+        name={"Morteza Chalaki"}
+        title={"CFO"}
+        link={"mchalaki"}
+      />
+      <Member
+        src={"/images/avatar/mehran.jpg"}
+        name={"Dr. Mehran Pourvahab"}
+        title={"Blockchain researcher"}
+        link={"mehran-pourvahab"}
+      />
+      <Member
+        src={"/images/avatar/amir.png"}
+        name={"Amir Ekbatani"}
+        title={"Test engineer"}
+        link={"amir-ekbatani-4b7399201"}
+      />
+      <Member src={""} title={"UI/UX designer"} />
+      {/* <Member src={""} title={"Rust developer"} /> */}
+
+      <Member src={""} title={"API developer"} />
+      <Member src={""} title={"Full stack developer"} />
     </Grid>
   );
 }
