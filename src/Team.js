@@ -53,7 +53,7 @@ function Team() {
         link={"amir-ekbatani-4b7399201"}
       />
 
-      <Member src={""} title={"Full stack developer"} />
+      <Member src={""} title={"Front-end developer"} />
     </Grid>
   );
 }
