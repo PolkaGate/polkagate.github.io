@@ -41,13 +41,13 @@ function App() {
             alt="intro"
             src="images/intro.png"
           />
-          <Grid item xs={12} textAlign="right" pr="40px" fontSize={13}>
+          <Grid item xs={12} textAlign="right" pr="40px" fontSize={14}>
             <Link
               href="https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki/How-To's"
               target="_blank"
               rel="noopener"
             >
-              More photo
+              More photos
             </Link>
           </Grid>
         </Grid>

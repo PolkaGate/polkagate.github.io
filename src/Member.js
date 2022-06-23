@@ -3,14 +3,14 @@ import React from "react";
 
 function Member({ src, name, link, title }) {
   return (
-    <Grid item md={3}>
+    <Grid item md={4}>
       <Stack
         direction="column"
         justifyContent="center"
         alignItems="center"
-        spacing={1}
+        mb={3}
       >
-        <Avatar src={src} sx={{  width: 100, height: 100 }} />
+        <Avatar src={src} sx={{  width: 130, height: 130 }} />
         <Typography align="center" variant="subtitle2">
           <Link
             href={`https://www.linkedin.com/in/${link}`}

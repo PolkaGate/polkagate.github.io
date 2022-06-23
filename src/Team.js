@@ -41,15 +41,18 @@ function Team() {
         link={"mehran-pourvahab"}
       />
       <Member
-        src={"/images/avatar/amir.png"}
+        src={"/images/avatar/martin.jpg"}
+        name={"Martin Azarbad"}
+        title={"UI/UX specialist"}
+        link={"mehranazarbad"}
+      />
+      <Member
+        src={"/images/avatar/amir.jpg"}
         name={"Amir Ekbatani"}
         title={"Test engineer"}
         link={"amir-ekbatani-4b7399201"}
       />
-      <Member src={""} title={"UI/UX designer"} />
-      {/* <Member src={""} title={"Rust developer"} /> */}
 
-      <Member src={""} title={"API developer"} />
       <Member src={""} title={"Full stack developer"} />
     </Grid>
   );
