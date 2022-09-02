@@ -13,6 +13,13 @@ function App() {
     );
   }, []);
 
+  const handleOpenChrome = useCallback(() => {
+    window.open(
+      "https://github.com/Nick-1979/polkadot-Js-Plus-extension#development-version",
+      "_blank"
+    );
+  }, []);
+
   return (
     <>
       <Grid container disableGutter justifyContent="center" sx={{ pt: 5 }}>
@@ -74,6 +81,21 @@ function App() {
           onClick={handleOpenFirefox}
         >
           Download for firefox
+        </Button>
+        <Button
+          color="secondary"
+          variant="contained"
+          sx={{ mt: 5, ml: 5 }}
+          startIcon={
+            <Avatar
+              alt="plus"
+              src="images/chrome.png"
+              sx={{ width: 20, height: 20 }}
+            />
+          }
+          onClick={handleOpenChrome}
+        >
+          Build for chrome
         </Button>
       </Grid>
 
