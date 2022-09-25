@@ -4,11 +4,11 @@ import { SocialIcon } from "react-social-icons";
 
 function Footer() {
   return (
-    <Grid
+    <Grid id='contacts'
       container
       spacing={2}
       justifyContent="center"
-      sx={{ p: " 30px", color: "white", bgcolor: "#172026" }}
+      sx={{ p: " 60px", color: "white", bgcolor: "#172026" }}
     >
       <Stack
         direction="row"
@@ -18,22 +18,22 @@ function Footer() {
       >
         <SocialIcon
           bgColor="white"
-          url="https://twitter.com/polkadotjsplus"
+          url="https://twitter.com/polkagate"
           style={{ height: 35, width: 35 }}
         />
         <SocialIcon
           bgColor="white"
-          url="https://github.com/Nick-1979/polkadot-Js-Plus-extension/wiki"
+          url="https://github.com/polkagate"
           style={{ height: 35, width: 35 }}
         />
         <SocialIcon
           bgColor="white"
-          url="mailto:polkadotjsplus@gmail.com"
+          url="mailto:polkagate@outlook.com"
           style={{ height: 35, width: 35 }}
         />
       </Stack>
       <Grid item xs={12} sx={{ fontSize: 12, textAlign: "center" }}>
-        © 2022 Plus Foundation
+        © 2022 PolkaGate Foundation
       </Grid>
     </Grid>
   );

@@ -3,11 +3,11 @@ import React, { useCallback } from "react";
 import Member from "./Member";
 function Team() {
   return (
-    <Grid
+    <Grid id='team'
       container
       spacing={2}
       justifyContent="center"
-      sx={{ px: " 30px", py: "50px", color: "white", bgcolor: "#e6007a" }}
+      sx={{ px: " 30px", py: "60px", color: "white", bgcolor: "#e6007a" }}
     >
       <Grid item xs={12} sx={{ textAlign: "center", pb: 2 }}>
         <Typography
@@ -18,11 +18,11 @@ function Team() {
          Meet Our Team
         </Typography>
         <Typography style={{ display: "inline-block" }} variant="body1">
-          <p>{"{We are hiring}"}</p>
+          {'   '}{"{We are hiring}"}
         </Typography>
       </Grid>
 
-      <Member
+      <Member 
         src={"/images/avatar/kami.jpg"}
         name={"Dr. Kami Ekbatanifard"}
         title={"Founder - CEO"}
