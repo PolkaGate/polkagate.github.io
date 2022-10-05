@@ -37,12 +37,12 @@ export default function PGMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Link smooth to="/#pjs+">
+        <Link smooth to="/#pjs+" style={{ textDecoration: 'none', color: 'black' }}>
           <MenuItem onClick={handleClose}>
             Polkadot js Plus extension
           </MenuItem>
         </Link>
-        <Link smooth to="/#pg">
+        <Link smooth to="/#pg" style={{ textDecoration: 'none' , color: 'black' }}>
           <MenuItem onClick={handleClose}>
             PolkaGate extension
           </MenuItem>
