@@ -1,5 +1,5 @@
-import { Avatar, Stack, Box, Grid, Typography, Button } from "@mui/material";
-import React, { useCallback } from "react";
+import { Stack, Grid } from "@mui/material";
+import React from "react";
 import { SocialIcon } from "react-social-icons";
 
 function Footer() {
@@ -29,6 +29,11 @@ function Footer() {
         <SocialIcon
           bgColor="white"
           url="mailto:polkagate@outlook.com"
+          style={{ height: 35, width: 35 }}
+        />
+        <SocialIcon
+          bgColor="white"
+          url="https://matrix.to/#/%23polkagate:matrix.org"
           style={{ height: 35, width: 35 }}
         />
       </Stack>
