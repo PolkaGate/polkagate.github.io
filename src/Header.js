@@ -1,6 +1,5 @@
-import { Avatar, Stack, Box, Grid, Typography, Button } from "@mui/material";
-import React, { useCallback } from "react";
-import { SocialIcon } from "react-social-icons";
+import { Box, Grid, Typography } from "@mui/material";
+import React from "react";
 import PGMenu from './PGMenu';
 
 function Header() {
@@ -9,10 +8,10 @@ function Header() {
       container
       spacing={2}
       justifyContent='space-between'
-      sx={{ px: " 30px", pt:'30px', mb: "70px", color: "white", bgcolor: "#180710" }}
+      sx={{ px: " 30px", pt: '30px', mb: "70px", color: "white", bgcolor: "#180710" }}
     >
       <Grid container item justifyContent='flex-start' spacing={2}>
-        <Grid item  container px='auto' xs={12} md={1.2}>
+        <Grid item container px='auto' xs={12} md={1.2}>
           <Box
             component="img"
             alt="logo"
@@ -29,8 +28,11 @@ function Header() {
           <Typography variant="h2" sx={{ fontWeight: 600 }}>
             PolkaGate
           </Typography>
-          <Typography variant="subtitle1" sx={{ ml: 1 }}>
-            The gateway to Polkadot ecosystem
+          <Typography variant="overline" sx={{ ml: 1, fontWeight:'bold' }}>
+            The gateway to Polkadot ecosystem <br/>
+          </Typography>
+          <Typography variant="overline" sx={{ ml: 1 }}>
+            Supported by Kusama Treasury
           </Typography>
         </Grid>
       </Grid>
