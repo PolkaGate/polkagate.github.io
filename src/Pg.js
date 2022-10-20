@@ -99,7 +99,7 @@ const Home = () => {
       </Grid>
       <Grid item md={12} px={{ sx: 2, md: 8 }}>
         <Typography align="center" variant="subtitle1" sx={{ pt: 4 }} color='white'>
-          PlkaGate extension is a Kusama Treasury supported extension/wallet. It is the next version of polkadot js plus which completely re-developed, with a new look, smooth user experience, and more new features.
+          PolkaGate extension is a Kusama Treasury supported extension/wallet. It is the next version of polkadot js plus which completely re-developed, with a new look, smooth user experience, and more new features.
 
         </Typography>
       </Grid>
