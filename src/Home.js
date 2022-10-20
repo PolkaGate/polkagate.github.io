@@ -19,7 +19,7 @@ const Home = () => {
 
   const handleOpenChrome = useCallback(() => {
     window.open(
-      "https://github.com/Nick-1979/polkadot-Js-Plus-extension#development-version",
+      "https://github.com/Nick-1979/polkadot-Js-Plus-extension#add-on",
       "_blank"
     );
   }, []);
