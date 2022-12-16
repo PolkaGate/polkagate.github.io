@@ -6,7 +6,8 @@ import Team from "./Team";
 import Footer from "./Footer";
 import Header from "./Header";
 import Slider from "./Slider";
-import Pjsplus from "./Pjsplus";
+import Plus from "./Plus";
+import Pools from "./Pools";
 import Pg from "./Pg";
 
 const Home = () => {
@@ -27,8 +28,9 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Pjsplus />
+      <Plus />
       <Pg />
+      <Pools />
       <Team />
       <Footer />
     </>
