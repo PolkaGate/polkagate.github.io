@@ -10,22 +10,22 @@ import Pg from "./Pg";
 import { web3Accounts, web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 
 const Home = () => {
-  const [injected, setInjected] = useState();
-  const [accounts, setAccounts] = useState();
+  // const [injected, setInjected] = useState();
+  // const [accounts, setAccounts] = useState();
 
-  useEffect(() => {
-    web3Enable('PolkaGate dapp').then((allInjected) => {
-      console.log('allInjected:', allInjected)
-      setInjected(allInjected)
-    });
-  }, []);
+  // useEffect(() => {
+  //   web3Enable('PolkaGate dapp').then((allInjected) => {
+  //     console.log('allInjected:', allInjected)
+  //     setInjected(allInjected)
+  //   });
+  // }, []);
 
-  useEffect(() => {
-    injected?.length && web3Accounts().then((acc) => {
-      console.log('acc:', acc)
-      setAccounts(acc)
-    });
-  }, [injected]);
+  // useEffect(() => {
+  //   injected?.length && web3Accounts().then((acc) => {
+  //     console.log('acc:', acc)
+  //     setAccounts(acc)
+  //   });
+  // }, [injected]);
 
   return (
     <>

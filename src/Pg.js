@@ -19,13 +19,9 @@ const PG = () => {
 
   return (
     <Grid id='pg' container spacing={2} justifyContent="center" sx={{ my: "30px", color: "#180710", bgcolor: "white" }}    >
-      <Grid container item justifyContent='center' alignItems='center' spacing={2} pb='30px'>
-        <Grid item>
-          <Typography variant="h4" sx={{ ml: 1, fontWeight: 600 }}>
-            PolkaGate extension
-          </Typography>
-        </Grid>
-      </Grid>
+      <Typography variant="h4" sx={{ fontWeight: 600, pb: '30px' }}>
+        PolkaGate extension
+      </Typography>
       <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }} spacing={2}>
         <Grid container justifyContent='center' item xs={12} md={3} >
           <Box
