@@ -8,7 +8,7 @@ function Header() {
       container
       spacing={2}
       justifyContent='space-between'
-      sx={{ px: " 30px", pt: '30px', mb: "70px", color: "white", bgcolor: "#180710" }}
+      sx={{ px: " 30px", pt: '30px', pb: "30px", color: "white", bgcolor: "#180710" }}
     >
       <Grid container item justifyContent='flex-start' spacing={2}>
         <Grid item container px='auto' xs={12} md={1.2}>

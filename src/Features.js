@@ -19,7 +19,7 @@ function Features() {
   );
 
   return (
-    <Grid container spacing={2} sx={{ px: "30px", py: "60px" }}>
+    <Grid container spacing={2} sx={{ px: "30px", py: "50px" }}>
       <Feature
         icon={<CenterFocusWeakIcon color="warning" sx={{ fontSize: 50 }} />}
         title={"Simple User Interface"}

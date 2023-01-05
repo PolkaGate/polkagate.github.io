@@ -1,35 +1,38 @@
 
-import { Avatar, Box, Grid, Typography, Button, Link } from "@mui/material";
-import React, { useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import Features from "./Features";
 import Team from "./Team";
 import Footer from "./Footer";
 import Header from "./Header";
-import Slider from "./Slider";
 import Plus from "./Plus";
 import Pools from "./Pools";
 import Pg from "./Pg";
+import { web3Accounts, web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 
 const Home = () => {
-  const handleOpenFirefox = useCallback(() => {
-    window.open(
-      "https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/",
-      "_blank"
-    );
+  const [injected, setInjected] = useState();
+  const [accounts, setAccounts] = useState();
+
+  useEffect(() => {
+    web3Enable('PolkaGate dapp').then((allInjected) => {
+      console.log('allInjected:', allInjected)
+      setInjected(allInjected)
+    });
   }, []);
 
-  const handleOpenChrome = useCallback(() => {
-    window.open(
-      "https://github.com/Nick-1979/polkadot-Js-Plus-extension#add-on",
-      "_blank"
-    );
-  }, []);
+  useEffect(() => {
+    injected?.length && web3Accounts().then((acc) => {
+      console.log('acc:', acc)
+      setAccounts(acc)
+    });
+  }, [injected]);
 
   return (
     <>
       <Header />
-      <Plus />
       <Pg />
+      <Features />
+      <Plus />
       <Pools />
       <Team />
       <Footer />

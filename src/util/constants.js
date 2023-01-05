@@ -1,0 +1,1 @@
+export const FLOATING_POINT_DIGIT=2

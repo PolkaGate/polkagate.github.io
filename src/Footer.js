@@ -1,8 +1,15 @@
-import { Stack, Grid } from "@mui/material";
-import React from "react";
+import { Box, Stack, Grid } from "@mui/material";
+import React, { useCallback } from "react";
 import { SocialIcon } from "react-social-icons";
 
 function Footer() {
+  const gotoElement = useCallback(() => {
+    window.open(
+      "https://matrix.to/#/%23polkagate:matrix.org",
+      "_blank"
+    );
+  }, []);
+
   return (
     <Grid id='contacts'
       container
@@ -31,10 +38,16 @@ function Footer() {
           url="mailto:polkagate@outlook.com"
           style={{ height: 35, width: 35 }}
         />
-        <SocialIcon
-          bgColor="white"
-          url="https://matrix.to/#/%23polkagate:matrix.org"
-          style={{ height: 35, width: 35 }}
+        <Box
+          component="img"
+          sx={{
+            height: 34,
+            width: 34,
+            cursor:'pointer',
+          }}
+          alt="intro"
+          src="images/element.svg"
+          onClick={gotoElement}
         />
       </Stack>
       <Grid item xs={12} sx={{ fontSize: 12, textAlign: "center" }}>
