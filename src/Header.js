@@ -6,7 +6,7 @@ function Header() {
   return (
     <Grid container spacing={2} justifyContent='space-between' sx={{ px: " 30px", pt: '30px', pb: "10px", color: "white", bgcolor: "#180710" }}    >
       <Grid container item justifyContent='flex-start' spacing={2}>
-        <Grid item container px='auto' xs={12} md={1.2}>
+        <Grid item container mx='auto' xs={12} md={1.2}>
           <Box
             component="img"
             alt="logo"
@@ -14,8 +14,8 @@ function Header() {
             sx={{
               width: 120,
               height: 120,
-              maxHeight: { xs: 80, md: 120 },
-              maxWidth: { xs: 80, md: 120 },
+              maxHeight: { xs: 80, md: '90%' },
+              maxWidth: { xs: 80, md: '90%' },
             }}
           />
         </Grid>

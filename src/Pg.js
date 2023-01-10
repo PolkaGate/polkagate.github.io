@@ -27,7 +27,7 @@ const PG = () => {
           <Box
             component="img"
             sx={{
-              maxWidth: { xs: '100%', md: 357 },
+              maxWidth: { xs: '100%' },
               border: 1,
               borderColor: 'white',
               borderRadius: '2%',
@@ -41,7 +41,7 @@ const PG = () => {
           <Box
             component="img"
             sx={{
-              maxWidth: { xs: '100%', md: 357 },
+              maxWidth: { xs: '100%' },
               border: 1,
               borderColor: 'white',
               borderRadius: '2%',
@@ -55,7 +55,7 @@ const PG = () => {
           <Box
             component="img"
             sx={{
-              maxWidth: { xs: '100%', md: 357 },
+              maxWidth: { xs: '100%' },
               border: 1,
               borderColor: 'white',
               borderRadius: '2%',
