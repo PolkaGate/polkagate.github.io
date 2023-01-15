@@ -1,9 +1,21 @@
 
 import { Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Pool from "./Pool";
+import getPrices from "./apis/getPrices";
 
-const Pools = () => {
+function Pools() {
+  const [prices, setPrices] = useState({});
+
+  useEffect(() => {
+    const chainNames = ['polkadot', 'kusama'];
+
+    getPrices(chainNames).then((prices) => {
+      setPrices(prices);
+      console.log('prices:', prices)
+    }).catch(console.error);
+  }, []);
+
 
   return (
     <Grid container justifyContent="space-between" id='pools' py='50px'>
@@ -16,8 +28,20 @@ const Pools = () => {
           Similarly you can join the Kusama pool with as little as 0.01 KSM.
         </Typography>
       </Grid>
-      <Pool index={8} name='PolkaGate ❤️ | https://polkagate.xyz | Nominates trusted, high return validators' token='DOT' decimal={10} />
-      <Pool index={18} name='PolkaGate ❤️ | https://polkagate.xyz' token='KSM' decimal={12} />
+      <Pool
+        index={8}
+        name='PolkaGate ❤️ | https://polkagate.xyz | Nominates trusted, high return validators'
+        token='DOT'
+        decimal={10}
+        tokenPrice={prices?.polkadot?.usd}
+      />
+      <Pool
+        index={18}
+        name='PolkaGate ❤️ | https://polkagate.xyz'
+        token='KSM'
+        decimal={12}
+        tokenPrice={prices?.kusama?.usd}
+      />
     </Grid>
   );
 }
