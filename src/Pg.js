@@ -12,7 +12,14 @@ const PG = () => {
 
   const handleOpenChrome = useCallback(() => {
     window.open(
-      "https://github.com/Nick-1979/polkagate#add-on",
+      "https://chrome.google.com/webstore/detail/polkagate/ginchbkmljhldofnbjabmeophlhdldgp",
+      "_blank"
+    );
+  }, []);
+  
+  const handleOpenEdge = useCallback(() => {
+    window.open(
+      "https://microsoftedge.microsoft.com/addons/detail/polkagate-the-gateway-to/eakellaeidmgcpifaofebhpcjienkajp",
       "_blank"
     );
   }, []);
@@ -20,7 +27,7 @@ const PG = () => {
   return (
     <Grid id='pg' container spacing={2} justifyContent="center" sx={{ my: "30px", color: "#180710", bgcolor: "white" }}    >
       <Typography variant="h4" sx={{ fontWeight: 600, pb: '30px' }}>
-        PolkaGate extension
+        Polkagate extension
       </Typography>
       <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }} spacing={2}>
         <Grid container justifyContent='center' item xs={12} md={3} >
@@ -72,7 +79,7 @@ const PG = () => {
         </Typography>
       </Grid>
       <Grid container item justifyContent='center' spacing={1}>
-        <Grid item xs={11} md={3.5}>
+        <Grid item xs={11} md={2.5}>
           <Button
             color="primary"
             variant="contained"
@@ -86,10 +93,10 @@ const PG = () => {
             }
             onClick={handleOpenFirefox}
           >
-            Download for firefox
+            Download for Firefox
           </Button>
         </Grid>
-        <Grid item xs={11} md={3.5}>
+        <Grid item xs={11} md={2.5}>
           <Button
             color="secondary"
             variant="contained"
@@ -103,7 +110,23 @@ const PG = () => {
             }
             onClick={handleOpenChrome}
           >
-            Build for chrome
+            Download for Chrome
+          </Button>
+        </Grid> <Grid item xs={11} md={2.5}>
+          <Button
+            color="success"
+            variant="contained"
+            style={{ width: '100%' }}
+            startIcon={
+              <Avatar
+                alt="plus"
+                src="images/edge.png"
+                sx={{ width: 20, height: 20 }}
+              />
+            }
+            onClick={handleOpenEdge}
+          >
+            Download for Edge
           </Button>
         </Grid>
       </Grid>

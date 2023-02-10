@@ -24,7 +24,7 @@ function Header() {
             PolkaGate
           </Typography>
           <Typography variant="overline" sx={{ ml: 1, fontWeight: 'bold' }}>
-            The gateway to Polkadot ecosystem <br />
+            The gateway to the Polkadot ecosystem <br />
           </Typography>
           <Typography variant="overline" sx={{ ml: 1 }}>
             Supported by Kusama Treasury

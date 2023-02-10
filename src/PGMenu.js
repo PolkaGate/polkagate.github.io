@@ -39,7 +39,7 @@ export default function PGMenu() {
       >
         <Link smooth to="/#pg" style={{ textDecoration: 'none' , color: 'black' }}>
           <MenuItem onClick={handleClose}>
-            PolkaGate extension
+            Polkagate extension
           </MenuItem>
         </Link>
         <Link smooth to="/#pjs+" style={{ textDecoration: 'none', color: 'black' }}>
