@@ -1,5 +1,5 @@
-import { Avatar, Box, Grid, Typography, Button } from "@mui/material";
-import React, { useCallback } from "react";
+import { Grid } from "@mui/material";
+import React from "react";
 import {
   KeyboardArrowLeft as KeyboardArrowLeftIcon,
   KeyboardArrowRight as KeyboardArrowRightIcon,

@@ -1,5 +1,5 @@
-import { Avatar, Stack, Box, Grid, Typography, Button } from "@mui/material";
-import React, { useCallback } from "react";
+import { Grid, Typography } from "@mui/material";
+import React from "react";
 import Member from "./Member";
 function Team() {
   return (

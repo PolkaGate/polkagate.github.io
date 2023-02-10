@@ -1,5 +1,5 @@
 
-import { CardContent, Card, Box, Grid, Button, CardActions } from "@mui/material";
+import { CardContent, Card, Box, Grid, CardActions } from "@mui/material";
 import React from "react";
 import usePool from "./hooks/usePool";
 import ShowBalance from "./components/ShowBalance";

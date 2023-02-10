@@ -1,11 +1,6 @@
 
 import { Avatar, Box, Grid, Typography, Button, Link } from "@mui/material";
 import React, { useCallback } from "react";
-import Features from "./Features";
-import Team from "./Team";
-import Footer from "./Footer";
-import Header from "./Header";
-import Slider from "./Slider";
 
 const Home = () => {
   const handleOpenFirefox = useCallback(() => {
