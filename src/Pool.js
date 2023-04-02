@@ -41,7 +41,7 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
     `${(parseFloat(amountToHuman(info.stashIdAccount.stakingLedger.active, decimal)) * tokenPrice).toLocaleString()} USD`;
 
   return (
-    <Grid item md={5.9} xs={12} sx={{ textAlign: "center", pb: 2, mb: '20px' }}>
+    <Grid item md={5.8} xs={12} sx={{ textAlign: "center", pb: 2, mb: '20px' , mx:'10px'}}>
       <Card elevation={18} borderRadius='50%' >
         <CardContent>
           <Grid component='img' src={`images/chains/${token}.svg`} width='50px' height='50px' my='20px' sx={{borderRadius:'50%'}}/>

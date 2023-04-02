@@ -4,7 +4,7 @@ import PGMenu from './PGMenu';
 
 function Header() {
   return (
-    <Grid container spacing={2} justifyContent='space-between' sx={{ px: " 30px", pt: '30px', pb: "10px", color: "white", bgcolor: "#180710" }}    >
+    <Grid container  justifyContent='space-between' sx={{ px: " 30px", pt: '30px', pb: "10px", color: "white", bgcolor: "#180710" }}    >
       <Grid container item justifyContent='flex-start' spacing={2}>
         <Grid item container mx='auto' xs={12} md={1.2}>
           <Box

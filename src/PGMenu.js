@@ -42,11 +42,11 @@ export default function PGMenu() {
             Polkagate extension
           </MenuItem>
         </Link>
-        <Link smooth to="/#pjs+" style={{ textDecoration: 'none', color: 'black' }}>
+        {/* <Link smooth to="/#pjs+" style={{ textDecoration: 'none', color: 'black' }}>
           <MenuItem onClick={handleClose}>
             Polkadot js Plus extension
           </MenuItem>
-        </Link>
+        </Link> */}
         <Link smooth to="/#pools" style={{ textDecoration: 'none', color: 'black' }}>
           <MenuItem onClick={handleClose}>
             Staking pools

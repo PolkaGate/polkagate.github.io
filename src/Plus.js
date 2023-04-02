@@ -5,7 +5,7 @@ import React, { useCallback } from "react";
 const Home = () => {
   const handleOpenFirefox = useCallback(() => {
     window.open(
-      "https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-plus-extension/",
+      "https://github.com/Nick-1979/polkadot-Js-Plus-extension#add-on",
       "_blank"
     );
   }, []);
@@ -73,7 +73,7 @@ const Home = () => {
             }
             onClick={handleOpenFirefox}
           >
-            Download for firefox
+            Build for firefox
           </Button>
         </Grid>
         <Grid item xs={11} md={3.5}>

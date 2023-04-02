@@ -1,4 +1,4 @@
-import { Box, Stack, Grid } from "@mui/material";
+import { Box, Stack, Grid, Link } from "@mui/material";
 import React, { useCallback } from "react";
 import { SocialIcon } from "react-social-icons";
 
@@ -11,12 +11,7 @@ function Footer() {
   }, []);
 
   return (
-    <Grid id='contacts'
-      container
-      spacing={2}
-      justifyContent="center"
-      sx={{ p: " 60px", color: "white", bgcolor: "#172026" }}
-    >
+    <Grid id='contacts' container spacing={2} justifyContent="center" sx={{ p: " 60px", color: "white", bgcolor: "#172026" }} >
       <Stack
         direction="row"
         justifyContent="center"
@@ -43,7 +38,7 @@ function Footer() {
           sx={{
             height: 34,
             width: 34,
-            cursor:'pointer',
+            cursor: 'pointer',
           }}
           alt="intro"
           src="images/element.svg"
@@ -51,7 +46,10 @@ function Footer() {
         />
       </Stack>
       <Grid item xs={12} sx={{ fontSize: 12, textAlign: "center" }}>
-        © 2022 PolkaGate Foundation
+        © 2022 PolkaGate Foundation -
+        <Link href='https://github.com/PolkaGate/polkagate-extension/blob/main/Privacy%20Policy.md' color="inherit" underline="hover">
+          PolkaGate Privacy Policy
+        </Link>
       </Grid>
     </Grid>
   );
