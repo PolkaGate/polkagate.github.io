@@ -16,7 +16,7 @@ const PG = () => {
       "_blank"
     );
   }, []);
-  
+
   const handleOpenEdge = useCallback(() => {
     window.open(
       "https://microsoftedge.microsoft.com/addons/detail/polkagate-the-gateway-to/eakellaeidmgcpifaofebhpcjienkajp",
@@ -74,8 +74,10 @@ const PG = () => {
         </Grid>
       </Grid>
       <Grid item md={12} mx={{ sx: 2, md: 8 }}>
-        <Typography align="center" variant="subtitle1" sx={{ pt: 4 }} md={{ with: '80%' }} color="#180710">
-          PolkaGate extension is a Kusama Treasury supported extension/wallet. It is the next version of polkadot js plus which completely re-developed, with a new look, smooth user experience, and many performance improvements.
+        <Typography align="center" variant="subtitle1" sx={{ pt: 4 }} md={{ width: '80%' }} color="#180710">
+          Polkagate is a non-custodial wallet that allows you to securely store, manage, and interact with your Polkadot and Kusama assets. It offers a user-friendly interface and easy access to the Polkadot and Kusama ecosystems, allowing you to participate in staking, crowdloans, and other activities.
+          With Polkagate, you are in complete control of your assets, as your private keys are stored securely on your device, and you can easily manage multiple accounts and switch between them with ease.
+          Polkagate is an essential tool for anyone looking to participate in the growing Polkadot and Kusama ecosystems.
         </Typography>
       </Grid>
       <Grid container item justifyContent='center' spacing={1}>
