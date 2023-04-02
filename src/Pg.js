@@ -74,7 +74,7 @@ const PG = () => {
         </Grid>
       </Grid>
       <Grid item md={12} mx={{ sx: 2, md: 8 }}>
-        <Typography align="center" variant="subtitle1" sx={{ pt: 4 }} md={{ width: '80%' }} color="#180710">
+        <Typography align="left" variant="subtitle1" sx={{ pt: 4 }} md={{ width: '80%' }} color="#180710">
           Polkagate is a non-custodial wallet that allows you to securely store, manage, and interact with your Polkadot and Kusama assets. It offers a user-friendly interface and easy access to the Polkadot and Kusama ecosystems, allowing you to participate in staking, crowdloans, and other activities.
           With Polkagate, you are in complete control of your assets, as your private keys are stored securely on your device, and you can easily manage multiple accounts and switch between them with ease.
           Polkagate is an essential tool for anyone looking to participate in the growing Polkadot and Kusama ecosystems.
