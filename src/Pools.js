@@ -1,5 +1,5 @@
 
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Link } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Pool from "./Pool";
 import getPrices from "./apis/getPrices";
@@ -23,9 +23,10 @@ function Pools() {
         <Typography style={{ display: "inline-block" }} variant="h5" width='100%' fontWeight={700}>
           Join our staking pools now!
         </Typography>
-        <Typography style={{ display: "inline-block" }} variant="subtitle1" fontWeight={500} width='80%' py='30px'>
+        <Typography align="left" style={{ display: "inline-block" }} variant="subtitle1" fontWeight={500} width='80%' py='30px'>
           Polkagate offers staking pools on both the Polkadot and Kusama blockchains, and you can easily become a part of them using the extension. Earn rewards by joining our Polkadot pool with a minimum of 1 DOT, or join our Kusama pool with only 0.01 KSM.
         </Typography>
+
       </Grid>
       <Pool
         index={8}
@@ -41,6 +42,11 @@ function Pools() {
         decimal={12}
         tokenPrice={prices?.kusama?.usd}
       />
+      <Grid container justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800 }}>
+        <Link href="https://www.youtube.com/watch?v=ErSKuhSGuKA" color="inherit" underline="hover">
+          View how to join a pool using the Polkagate extension
+        </Link>
+      </Grid>
     </Grid>
   );
 }
