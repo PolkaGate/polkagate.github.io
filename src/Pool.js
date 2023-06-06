@@ -1,5 +1,5 @@
 
-import { CardContent, Card, Box, Grid, CardActions } from "@mui/material";
+import { CardContent, Card, Box, Grid, CardActions, Link } from "@mui/material";
 import React from "react";
 import usePool from "./hooks/usePool";
 import ShowBalance from "./components/ShowBalance";
@@ -40,11 +40,13 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
   const stakedInUsd = info?.stashIdAccount?.stakingLedger?.active && tokenPrice &&
     `${(parseFloat(amountToHuman(info.stashIdAccount.stakingLedger.active, decimal)) * tokenPrice).toLocaleString()} USD`;
 
+  const subscanLink = (i) => `https://${token === 'DOT' ? 'Polkadot' : 'kusama'}.subscan.io/nomination_pool/${String(i)}`;
+
   return (
-    <Grid item md={5.8} xs={12} sx={{ textAlign: "center", pb: 2, mb: '20px' , mx:'10px'}}>
+    <Grid item md={5.8} xs={12} sx={{ textAlign: "center", pb: 2, mb: '20px', mx: '10px' }}>
       <Card elevation={18} borderRadius='50%' >
         <CardContent>
-          <Grid component='img' src={`images/chains/${token}.svg`} width='50px' height='50px' my='20px' sx={{borderRadius:'50%'}}/>
+          <Grid component='img' src={`images/chains/${token}.svg`} width='50px' height='50px' my='20px' sx={{ borderRadius: '50%' }} />
           <Grid container>
             <Grid container item width='fit-content' mr='10px'>
               <Box component='img' src={`images/pools/${token}Pool.png`} width='50px' height='50px' />
@@ -64,18 +66,30 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
                   <ShowValue value={info?.bondedPool?.memberCounter} />
                 </Grid>
               </Grid>
-              <Grid item container xs={12} textAlign='left' >
-                <Grid item>
-                  Total staked:
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
-                  <ShowBalance balance={info?.stashIdAccount?.stakingLedger?.active} decimal={decimal} token={token} />
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, mx: '15px' }}>
-                  |
+              <Grid item container justifyContent='space-between' xs={12}  >
+                <Grid container item justifyContent='flex-start' xs={10}>
+                  <Grid item>
+                    Total staked:
+                  </Grid>
+                  <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
+                    <ShowBalance balance={info?.stashIdAccount?.stakingLedger?.active} decimal={decimal} token={token} />
+                  </Grid>
+                  <Grid item sx={{ fontWeight: 600, mx: '15px' }}>
+                    |
+                  </Grid>
+                  <Grid item sx={{ fontWeight: 600 }}>
+                    <ShowValue value={stakedInUsd} />
+                  </Grid>
                 </Grid>
                 <Grid item sx={{ fontWeight: 600 }}>
-                  <ShowValue value={stakedInUsd} />
+                  <Link
+                    href={`${subscanLink(index)}`}
+                    rel='noreferrer'
+                    target='_blank'
+                    underline='none'
+                  >
+                    <Box component='img' src={`images/subscan.svg`} width='30px' height='30px' />
+                  </Link>
                 </Grid>
               </Grid>
             </Grid>

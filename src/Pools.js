@@ -24,9 +24,8 @@ function Pools() {
           Join our staking pools now!
         </Typography>
         <Typography align="left" style={{ display: "inline-block" }} variant="subtitle1" fontWeight={500} width='80%' py='30px'>
-          Polkagate offers staking pools on both the Polkadot and Kusama blockchains, and you can easily become a part of them using the extension. Earn rewards by joining our Polkadot pool with a minimum of 1 DOT, or join our Kusama pool with only 0.01 KSM.
+          Polkagate provides staking pools on both the Polkadot and Kusama blockchains, allowing you to effortlessly participate in them using our extension. By joining our Polkadot pool with a minimum of 1 DOT or our Kusama pool with just 0.01 KSM, you can earn rewards. We carefully nominate reliable validators that offer high returns
         </Typography>
-
       </Grid>
       <Pool
         index={8}
