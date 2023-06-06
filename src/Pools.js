@@ -29,7 +29,7 @@ function Pools() {
       </Grid>
       <Pool
         index={8}
-        name='PolkaGate ❤️ | https://polkagate.xyz | Nominates trusted, high return validators'
+        name='PolkaGate ❤️ | https://polkagate.xyz'
         token='DOT'
         decimal={10}
         tokenPrice={prices?.polkadot?.usd}
