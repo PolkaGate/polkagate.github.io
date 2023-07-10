@@ -24,7 +24,7 @@ export default function PGMenu() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        sx={{ color: 'white', fontSize: 15, px: '20px' }}
+        sx={{ fontSize: 15, px: '20px' }}
       >
         Products
       </Button>
@@ -37,7 +37,7 @@ export default function PGMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Link smooth to="/#pg" style={{ textDecoration: 'none' , color: 'black' }}>
+        <Link smooth to="/#pg" style={{ textDecoration: 'none'  }}>
           <MenuItem onClick={handleClose}>
             Polkagate extension
           </MenuItem>
@@ -47,7 +47,7 @@ export default function PGMenu() {
             Polkadot js Plus extension
           </MenuItem>
         </Link> */}
-        <Link smooth to="/#pools" style={{ textDecoration: 'none', color: 'black' }}>
+        <Link smooth to="/#pools" style={{ textDecoration: 'none' }}>
           <MenuItem onClick={handleClose}>
             Staking pools
           </MenuItem>
@@ -56,7 +56,7 @@ export default function PGMenu() {
 
       <Link smooth to="/#team">
         <Button
-          sx={{ color: 'white', fontSize: 15 }}
+          sx={{  fontSize: 15 }}
         >
           Team
         </Button>
@@ -64,7 +64,7 @@ export default function PGMenu() {
 
       <Link smooth to="/#contacts">
         <Button
-          sx={{ color: 'white', fontSize: 15 }}
+          sx={{  fontSize: 15 }}
         >
           Contacts
         </Button>

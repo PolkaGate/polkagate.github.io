@@ -11,7 +11,7 @@ function Footer() {
   }, []);
 
   return (
-    <Grid id='contacts' container spacing={2} justifyContent="center" sx={{ p: " 60px", color: "white", bgcolor: "#172026" }} >
+    <Grid id='contacts' container justifyContent="center" sx={{ p: " 60px", color: "white", bgcolor: "#172026", position: 'inherit' }} >
       <Stack
         direction="row"
         justifyContent="center"
@@ -45,8 +45,8 @@ function Footer() {
           onClick={gotoElement}
         />
       </Stack>
-      <Grid item xs={12} sx={{ fontSize: 12, textAlign: "center" }}>
-        © 2022 PolkaGate Foundation -
+      <Grid item xs={12} sx={{ fontSize: 12, textAlign: "center", pt:'15px' }}>
+        © 2023 PolkaGate Foundation -
         <Link href='https://github.com/PolkaGate/polkagate-extension/blob/main/Privacy%20Policy.md' color="inherit" underline="hover">
           PolkaGate Privacy Policy
         </Link>

@@ -25,9 +25,9 @@ const PG = () => {
   }, []);
 
   return (
-    <Grid id='pg' container spacing={2} justifyContent="center" sx={{ my: "30px", color: "#180710", bgcolor: "white" }}    >
-      <Typography variant="h4" sx={{ fontWeight: 600, pb: '30px' }}>
-        Polkagate extension
+    <Grid id='pg' container spacing={2} justifyContent="center" sx={{ mt: "40px",mb: "30px",  position:'relative'}}    >
+      <Typography variant="h4" sx={{ fontWeight: 600, pb: '30px',     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
+        Polkagate Wallet / Extension
       </Typography>
       <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }} spacing={2}>
         <Grid container justifyContent='center' item xs={12} md={3} >
@@ -41,7 +41,7 @@ const PG = () => {
               mr: 1
             }}
             alt="intro"
-            src="images/pg/qucickActionDark.png"
+            src="images/pg/solo-stake.png"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={12} md={3}>
@@ -55,7 +55,7 @@ const PG = () => {
               mr: 1
             }}
             alt="intro"
-            src="images/pg/homeLight.png"
+            src="images/pg/pg-light.png"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={12} md={3}>
@@ -65,11 +65,12 @@ const PG = () => {
               maxWidth: { xs: '100%' },
               border: 1,
               borderColor: 'white',
-              borderRadius: '2%',
-              mr: 1
+              borderRadius: '8px',
+              mr: 1,
+              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
             alt="intro"
-            src="images/pg/accountDetails.png"
+            src="images/pg/account.png"
           />
         </Grid>
       </Grid>

@@ -5,6 +5,7 @@ import {
   AutoAwesome as AutoAwesomeIcon,
   Api as ApiIcon,
 } from "@mui/icons-material";
+
 function Features() {
   const Feature = ({ icon, title, text }) => (
     <Grid item md={4} sx={{ px: 4 }}>
@@ -19,7 +20,7 @@ function Features() {
   );
 
   return (
-    <Grid container spacing={2} sx={{ px: "30px", py: "50px" }}>
+    <Grid container spacing={2} sx={{ px: "30px", py: "50px", position:'relative' }}>
       <Feature
         icon={<CenterFocusWeakIcon color="warning" sx={{ fontSize: 50 }} />}
         title={"Simple User Interface"}
