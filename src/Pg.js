@@ -30,7 +30,7 @@ const PG = () => {
         Polkagate Wallet / Extension
       </Typography>
       <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }} spacing={2}>
-        <Grid container justifyContent='center' item xs={12} md={3} >
+        {/* <Grid container justifyContent='center' item xs={12} md={3} >
           <Box
             component="img"
             sx={{
@@ -43,7 +43,7 @@ const PG = () => {
             alt="intro"
             src="images/pg/solo-stake.png"
           />
-        </Grid>
+        </Grid> */}
         <Grid container justifyContent='center' item xs={12} md={3}>
           <Box
             component="img"
@@ -55,7 +55,7 @@ const PG = () => {
               mr: 1
             }}
             alt="intro"
-            src="images/pg/pg-light.png"
+            src="images/pg/homeDark.png"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={12} md={3}>
