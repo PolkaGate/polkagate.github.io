@@ -3,6 +3,7 @@ import { Grid, Typography, Link } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Pool from "./Pool";
 import getPrices from "./apis/getPrices";
+import { hexToRgba } from './util/utils';
 
 function Pools() {
   const [prices, setPrices] = useState({});
@@ -18,7 +19,7 @@ function Pools() {
 
 
   return (
-    <Grid container justifyContent="space-between" id='pools' sx={{ color: "white", bgcolor: "#180710", py: '50px' }}>
+    <Grid container justifyContent="space-between" id='pools' sx={{ color: "white", bgcolor: hexToRgba("#180710", 0.88), position: 'inherit', py: '50px' }}>
       <Grid item xs={12} sx={{ textAlign: "center", pb: 2 }}>
         <Typography style={{ display: "inline-block" }} variant="h5" width='100%' fontWeight={700}>
           Join our staking pools now!

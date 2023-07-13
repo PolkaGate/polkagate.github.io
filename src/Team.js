@@ -1,13 +1,14 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Member from "./Member";
+import { hexToRgba } from './util/utils';
+
 function Team() {
   return (
     <Grid id='team'
       container
-      spacing={2}
       justifyContent="center"
-      sx={{ px: " 30px", py: "60px", color: "white", bgcolor: "#e6007a" }}
+      sx={{ px: " 30px", py: "60px", color: "white", bgcolor: hexToRgba("#e6007a", 0.9), position: 'inherit' }}
     >
       <Grid item xs={12} sx={{ textAlign: "center", pb: 2 }}>
         <Typography
@@ -15,14 +16,14 @@ function Team() {
           variant="h5"
           fontWeight={700}
         >
-         Meet Our Team
+          Meet Our Team
         </Typography>
         <Typography style={{ display: "inline-block" }} variant="body1">
           {'   '}{"{We are hiring}"}
         </Typography>
       </Grid>
 
-      <Member 
+      <Member
         src={"/images/avatar/kami.jpg"}
         name={"Dr. Kami Ekbatanifard"}
         title={"Founder - CEO"}
