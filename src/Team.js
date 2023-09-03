@@ -25,7 +25,7 @@ function Team() {
 
       <Member
         src={"/images/avatar/kami.jpg"}
-        name={"Dr. Kami Ekbatanifard"}
+        name={"Dr. G. (Kami) Ekbatanifard"}
         title={"Founder - CEO"}
         link={"ekbatanifard"}
       />
