@@ -25,12 +25,14 @@ const PG = () => {
   }, []);
 
   return (
-    <Grid id='pg' container spacing={2} justifyContent="center" sx={{ mt: "40px",mb: "30px",  position:'relative'}}    >
-      <Typography variant="h4" sx={{ fontWeight: 600, pb: '30px',     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
-        Polkagate Wallet / Extension
-      </Typography>
+    <Grid id='pg' container spacing={2} justifyContent="center" justifyItems='center' sx={{ mt: "40px", mb: "30px", position: 'relative' }}    >
+      <Grid container justifyContent='center' item >
+        <Typography variant="h4" sx={{ fontWeight: 600, pb: '30px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
+          Polkagate Wallet / Extension
+        </Typography>
+      </Grid>
       <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }} spacing={2}>
-        {/* <Grid container justifyContent='center' item xs={12} md={3} >
+        <Grid container justifyContent='center' justifyItems='center' item xs={12} md={3}>
           <Box
             component="img"
             sx={{
@@ -38,21 +40,6 @@ const PG = () => {
               border: 1,
               borderColor: 'white',
               borderRadius: '2%',
-              mr: 1
-            }}
-            alt="intro"
-            src="images/pg/solo-stake.png"
-          />
-        </Grid> */}
-        <Grid container justifyContent='center' item xs={12} md={3}>
-          <Box
-            component="img"
-            sx={{
-              maxWidth: { xs: '100%' },
-              border: 1,
-              borderColor: 'white',
-              borderRadius: '2%',
-              mr: 1
             }}
             alt="intro"
             src="images/pg/homeDark.png"
@@ -66,7 +53,6 @@ const PG = () => {
               border: 1,
               borderColor: 'white',
               borderRadius: '8px',
-              mr: 1,
               boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
             alt="intro"
@@ -90,23 +76,6 @@ const PG = () => {
             startIcon={
               <Avatar
                 alt="plus"
-                src="images/firefox.png"
-                sx={{ width: 20, height: 20 }}
-              />
-            }
-            onClick={handleOpenFirefox}
-          >
-            Download for Firefox
-          </Button>
-        </Grid>
-        <Grid item xs={11} md={2.5}>
-          <Button
-            color="secondary"
-            variant="contained"
-            style={{ width: '100%' }}
-            startIcon={
-              <Avatar
-                alt="plus"
                 src="images/chrome.png"
                 sx={{ width: 20, height: 20 }}
               />
@@ -115,7 +84,8 @@ const PG = () => {
           >
             Download for Chrome
           </Button>
-        </Grid> <Grid item xs={11} md={2.5}>
+        </Grid>
+        <Grid item xs={11} md={2.5}>
           <Button
             color="success"
             variant="contained"
@@ -130,6 +100,23 @@ const PG = () => {
             onClick={handleOpenEdge}
           >
             Download for Edge
+          </Button>
+        </Grid>
+        <Grid item xs={11} md={2.5}>
+          <Button
+            color="secondary"
+            variant="contained"
+            style={{ width: '100%' }}
+            startIcon={
+              <Avatar
+                alt="plus"
+                src="images/firefox.png"
+                sx={{ width: 20, height: 20 }}
+              />
+            }
+            onClick={handleOpenFirefox}
+          >
+            Download for Firefox
           </Button>
         </Grid>
       </Grid>
