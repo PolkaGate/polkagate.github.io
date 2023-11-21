@@ -22,7 +22,6 @@ function Team() {
           {'   '}{"{We are hiring}"}
         </Typography>
       </Grid>
-
       <Member
         src={"/images/avatar/kami.jpg"}
         name={"Dr. G. (Kami) Ekbatanifard"}
@@ -53,8 +52,12 @@ function Team() {
         title={"Test engineer"}
         link={"amir-ekbatani-4b7399201"}
       />
-
-      <Member src={""} title={"Front-end developer"} />
+      <Member
+        src={"/images/avatar/frontEndDeveloperAvatar.jpeg"}
+        name={"John Doe"}
+        title={"Front-end developer"}
+        link={""}
+      />
     </Grid>
   );
 }

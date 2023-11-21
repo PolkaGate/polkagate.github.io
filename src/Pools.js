@@ -42,9 +42,9 @@ function Pools() {
         decimal={12}
         tokenPrice={prices?.kusama?.usd}
       />
-      <Grid container justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800 }}>
-        <Link href="https://www.youtube.com/watch?v=ErSKuhSGuKA" color="inherit" underline="hover">
-          View how to join a pool using the Polkagate extension
+      <Grid container justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, px: { xs: '10px', md: 'auto' } }}>
+        <Link href="https://www.youtube.com/watch?v=ErSKuhSGuKA" color="#e73188" underline="hover">
+          Watch how to join a pool using the Polkagate extension
         </Link>
       </Grid>
     </Grid>

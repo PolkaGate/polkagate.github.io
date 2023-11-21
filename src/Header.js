@@ -4,7 +4,7 @@ import PGMenu from './PGMenu';
 
 function Header() {
   return (
-    <Grid container justifyContent='space-between' sx={{ px: " 30px", pt: '30px', pb: "10px", position: 'relative' }}    >
+    <Grid container justifyContent='space-between' sx={{ backgroundColor: 'black', p: "30px 30px 10px", position: 'relative', opacity: '0.9' }}    >
       <Grid container item justifyContent='flex-start' spacing={2} md>
         <Grid item container mx='auto' width='fit-content'>
           <Box
@@ -20,13 +20,13 @@ function Header() {
           />
         </Grid>
         <Grid item xs={12} md>
-          <Typography variant="h3" sx={{ fontWeight: 600, textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>
+          <Typography variant="h3" sx={{ color: 'white', fontWeight: 600, textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' , textAlign: { xs: 'center', md: 'left' }}}>
             PolkaGate
           </Typography>
-          <Typography variant="h5" sx={{ ml: 1, fontWeight: 'bold', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)' }}>
-            The gateway to the Polkadot ecosystem <br />
+          <Typography sx={{ color: 'white',  fontWeight: 600, ml: 1, textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)' }}>
+            The Gateway to the Polkadot Ecosystem <br />
           </Typography>
-          <Typography variant="overline" sx={{ ml: 1, textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)' }}>
+          <Typography  sx={{ color: 'white',fontSize: '15px', fontWeight: 300, ml: 1, textShadow: '1px 1px 2px rgba(0, 0, 0, 0.1)' }}>
             Supported by Kusama Treasury
           </Typography>
         </Grid>

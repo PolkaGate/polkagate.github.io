@@ -48,7 +48,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Grid container sx={{ position: 'relative', m: 0 }}>
+    <Grid container sx={{ position: 'relative', m: 0, p: 0 }}>
       <Particles
         init={particlesInit}
         loaded={particlesLoaded}

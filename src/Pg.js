@@ -24,15 +24,16 @@ const PG = () => {
     );
   }, []);
 
+
   return (
     <Grid id='pg' container spacing={2} justifyContent="center" justifyItems='center' sx={{ mt: "40px", mb: "30px", position: 'relative' }}    >
       <Grid container justifyContent='center' item >
-        <Typography variant="h4" sx={{ fontWeight: 600, pb: '30px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
-          Polkagate Wallet / Extension
+        <Typography sx={{ fontWeight: 600, fontSize: { xs: '24px', md: '28px' }, pb: '30px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
+          Browser extension / Wallet
         </Typography>
       </Grid>
       <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }} spacing={2}>
-        <Grid container justifyContent='center' justifyItems='center' item xs={12} md={3}>
+        <Grid container justifyContent='center' justifyItems='center' item xs={10} md={3}>
           <Box
             component="img"
             sx={{
@@ -42,10 +43,10 @@ const PG = () => {
               borderRadius: '2%',
             }}
             alt="intro"
-            src="images/pg/homeDark.png"
+            src="images/pg/homeDarkV2.svg"
           />
         </Grid>
-        <Grid container justifyContent='center' item xs={12} md={3}>
+        <Grid container justifyContent='center' item xs={10} md={3}>
           <Box
             component="img"
             sx={{
@@ -56,12 +57,26 @@ const PG = () => {
               boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
             alt="intro"
-            src="images/pg/account.png"
+            src="images/pg/rewards.svg"
+          />
+        </Grid>
+        <Grid container justifyContent='center' item xs={10} md={3}>
+          <Box
+            component="img"
+            sx={{
+              maxWidth: { xs: '100%' },
+              border: 1,
+              borderColor: 'white',
+              borderRadius: '8px',
+              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+            }}
+            alt="intro"
+            src="images/pg/pool.svg"
           />
         </Grid>
       </Grid>
       <Grid item md={12} mx={{ sx: 2, md: 8 }}>
-        <Typography align="left" variant="subtitle1" sx={{ pt: 4 }} md={{ width: '80%' }} color="#180710">
+        <Typography variant="subtitle1" sx={{ pt: 4, textAlign: { md: "left", xs: 'justify' }, px:{xs:'10px', md:'auto'} }} color="#180710">
           Polkagate is a non-custodial wallet that allows you to securely store, manage, and interact with your Polkadot and Kusama assets. It offers a user-friendly interface and easy access to the Polkadot and Kusama ecosystems, allowing you to participate in staking, crowdloans, and other activities.
           With Polkagate, you are in complete control of your assets, as your private keys are stored securely on your device, and you can easily manage multiple accounts and switch between them with ease.
           Polkagate is an essential tool for anyone looking to participate in the growing Polkadot and Kusama ecosystems.
@@ -72,10 +87,10 @@ const PG = () => {
           <Button
             color="primary"
             variant="contained"
-            style={{ width: '100%' }}
+            style={{ width: '100%', minWidth: 'max-content' }}
             startIcon={
               <Avatar
-                alt="plus"
+                alt="chrome"
                 src="images/chrome.png"
                 sx={{ width: 20, height: 20 }}
               />
@@ -89,10 +104,10 @@ const PG = () => {
           <Button
             color="success"
             variant="contained"
-            style={{ width: '100%' }}
+            style={{ width: '100%', minWidth: 'max-content' }}
             startIcon={
               <Avatar
-                alt="plus"
+                alt="edge"
                 src="images/edge.png"
                 sx={{ width: 20, height: 20 }}
               />
@@ -104,9 +119,26 @@ const PG = () => {
         </Grid>
         <Grid item xs={11} md={2.5}>
           <Button
+            color="warning"
+            variant="contained"
+            style={{ width: '100%', minWidth: 'max-content' }}
+            startIcon={
+              <Avatar
+                alt="brave"
+                src="images/brave.png"
+                sx={{ width: 20, height: 20 }}
+              />
+            }
+            onClick={handleOpenChrome}
+          >
+            Download for Brave
+          </Button>
+        </Grid>
+        <Grid item xs={11} md={2.5}>
+          <Button
             color="secondary"
             variant="contained"
-            style={{ width: '100%' }}
+            style={{ width: '100%', minWidth: 'max-content' }}
             startIcon={
               <Avatar
                 alt="plus"
@@ -120,9 +152,7 @@ const PG = () => {
           </Button>
         </Grid>
       </Grid>
-
-
-    </Grid>
+    </Grid >
   );
 }
 
