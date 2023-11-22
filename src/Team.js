@@ -25,7 +25,7 @@ function Team() {
       <Member
         src={"/images/avatar/kami.jpg"}
         name={"Dr. G. (Kami) Ekbatanifard"}
-        title={"Founder - CEO"}
+        title={"Founder - CEO - developer"}
         link={"ekbatanifard"}
       />
       <Member
@@ -49,13 +49,13 @@ function Team() {
       <Member
         src={"/images/avatar/amir.jpg"}
         name={"Amir Ekbatani"}
-        title={"Test engineer"}
+        title={"Test engineer - Front-end dev."}
         link={"amir-ekbatani-4b7399201"}
       />
       <Member
         src={"/images/avatar/frontEndDeveloperAvatar.jpeg"}
         name={"John Doe"}
-        title={"Front-end developer"}
+        title={"Front-end dev."}
         link={""}
       />
     </Grid>
