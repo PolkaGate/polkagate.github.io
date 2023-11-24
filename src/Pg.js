@@ -43,7 +43,7 @@ const PG = () => {
               borderRadius: '2%',
             }}
             alt="intro"
-            src="images/pg/homeDarkV2.svg"
+            src="images/pg/homeDark.svg"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={10} md={3}>
