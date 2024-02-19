@@ -1,1 +1,4 @@
 npm rub build
+copy build folder contents into docs folder
+push docs folder
+
