@@ -16,6 +16,10 @@ export default function PGMenu() {
     setAnchorEl(null);
   };
 
+  const gotoApps = () => {
+    window.open("https://apps.polkagate.xyz");
+  };
+
   return (
     <>
       <Button
@@ -24,7 +28,7 @@ export default function PGMenu() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        sx={{ fontSize: 15, p: 'auto', color:'#e73188' }}
+        sx={{ fontSize: 15, p: 'auto', color: '#e73188' }}
       >
         Products
       </Button>
@@ -37,7 +41,7 @@ export default function PGMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Link smooth to="/#pg" style={{ textDecoration: 'none'  }}>
+        <Link smooth to="/#pg" style={{ textDecoration: 'none' }}>
           <MenuItem onClick={handleClose}>
             Polkagate extension
           </MenuItem>
@@ -47,11 +51,13 @@ export default function PGMenu() {
             Staking pools
           </MenuItem>
         </Link>
+        <MenuItem onClick={gotoApps} sx={{color:"blue"}}>
+          Apps
+        </MenuItem>
       </Menu>
-
       <Link smooth to="/#team">
         <Button
-        sx={{ fontSize: 15, color:'#e73188' }}
+          sx={{ fontSize: 15, color: '#e73188' }}
         >
           Team
         </Button>
@@ -59,7 +65,7 @@ export default function PGMenu() {
 
       <Link smooth to="/#contacts">
         <Button
-        sx={{ fontSize: 15, color:'#e73188' }}
+          sx={{ fontSize: 15, color: '#e73188' }}
         >
           Contacts
         </Button>
