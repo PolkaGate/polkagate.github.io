@@ -1,4 +1,3 @@
-npm rub build
-copy build folder contents into docs folder
+npm rub build:www
 push docs folder
 

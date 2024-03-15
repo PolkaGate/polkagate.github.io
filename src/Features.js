@@ -20,17 +20,17 @@ function Features() {
   );
 
   return (
-    <Grid container spacing={2} sx={{ px: "30px", py: "50px", position:'relative' }}>
+    <Grid container spacing={2} sx={{ px: { xs: '30px', md: "150px" }, py: "50px", position: 'relative' }}>
       <Feature
         icon={<CenterFocusWeakIcon color="warning" sx={{ fontSize: 50 }} />}
         title={"Simple User Interface"}
         text={
-          "Feel comfortable, focusing on what's important, by creating a stylised but instantly recognisable UI"
+          "Feel comfortable, focusing on what's important, by creating a stylized but instantly recognizable UI"
         }
       />
       <Feature
         icon={<AutoAwesomeIcon color="success" sx={{ fontSize: 50 }} />}
-        title={" Efficient User Expereince"}
+        title={" Efficient User Experience"}
         text={
           "Efficiently and quickly get most of the common functionalities done on Kusama/Polkadot blockchains"
         }

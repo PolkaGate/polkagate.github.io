@@ -6,9 +6,9 @@ import Features from "./Features";
 import Team from "./Team";
 import Footer from "./Footer";
 import Header from "./Header";
-import Plus from "./Plus";
 import Pools from "./Pools";
 import Pg from "./Pg";
+import Snap from "./Snap";
 import { web3Accounts, web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 
 import { useCallback } from "react";
@@ -57,6 +57,7 @@ const Home = () => {
       <Header />
       <Pg />
       <Features />
+      <Snap />
       <Pools />
       <Team />
       <Footer />

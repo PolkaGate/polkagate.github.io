@@ -43,7 +43,12 @@ export default function PGMenu() {
       >
         <Link smooth to="/#pg" style={{ textDecoration: 'none' }}>
           <MenuItem onClick={handleClose}>
-            Polkagate extension
+            Browser extension/wallet
+          </MenuItem>
+        </Link>
+        <Link smooth to="/#snap" style={{ textDecoration: 'none' }}>
+          <MenuItem onClick={handleClose}>
+            MetaMask snap
           </MenuItem>
         </Link>
         <Link smooth to="/#pools" style={{ textDecoration: 'none' }}>
