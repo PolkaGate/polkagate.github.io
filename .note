@@ -1,3 +1,2 @@
-npm rub build:www
+npm run build:www
 push docs folder
-
