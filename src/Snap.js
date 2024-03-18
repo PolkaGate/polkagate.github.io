@@ -1,6 +1,7 @@
 
-import { Avatar, Box, Grid, Typography, Button } from "@mui/material";
+import { Link, Box, Grid, Typography, Button } from "@mui/material";
 import React, { useCallback } from "react";
+import { Apps as AppsIcon, YouTube as YouTubeIcon } from '@mui/icons-material';
 
 const Snap = () => {
   const handleDownloadSnap = useCallback(() => {
@@ -22,11 +23,11 @@ const Snap = () => {
     <Grid id='snap' container spacing={2} justifyContent="center" justifyItems='center' sx={{ bgcolor: '#cecbcc', pt: "50px", pb: "100px", position: 'relative', mt: '50px' }}    >
       <Grid container justifyContent='center' item >
         <Typography sx={{ fontWeight: 600, fontSize: { xs: '24px', md: '28px' }, pb: '10px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', display: 'block' }}>
-        🦊 MetaMask Snap by PolkaGate 
+          🦊 MetaMask Snap by PolkaGate
         </Typography>
       </Grid>
       <Grid container justifyContent='center' item >
-        <Typography sx={{ fontWeight: 400, fontSize: { xs: '18px', md: '22px' }, pb: '30px', px: '10px',textAlign:'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
+        <Typography sx={{ fontWeight: 400, fontSize: { xs: '18px', md: '22px' }, pb: '30px', px: '10px', textAlign: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
           Enables MetaMask to interact with tokens within the Polkadot ecosystem, including Polkadot, Kusama, and more.
         </Typography>
       </Grid>
@@ -103,9 +104,7 @@ const Snap = () => {
             variant="contained"
             style={{ width: '100%', minWidth: 'max-content' }}
             startIcon={
-              <Avatar
-                alt="edge"
-                src="images/edge.png"
+              <AppsIcon
                 sx={{ width: 20, height: 20 }}
               />
             }
@@ -114,6 +113,14 @@ const Snap = () => {
             Visit Apps
           </Button>
         </Grid>
+      </Grid>
+      <Grid container  justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, pt: '40px', px: { xs: '10px', md: 'auto' } }}>
+        <Link href="https://youtu.be/BnQYDETCeGY" color="#e73188" underline="hover">
+          <Grid alignItems='center' container item>
+            <YouTubeIcon fontSize="large" />
+            Watch a demo of how to use the MetaMask PolkaGate Snap
+          </Grid>
+        </Link>
       </Grid>
     </Grid >
   );

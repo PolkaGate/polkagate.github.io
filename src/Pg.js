@@ -28,8 +28,13 @@ const PG = () => {
   return (
     <Grid id='pg' container spacing={2} justifyContent="center" justifyItems='center' sx={{ mt: "40px", mb: "30px", position: 'relative' }}    >
       <Grid container justifyContent='center' item >
-        <Typography sx={{ fontWeight: 600, fontSize: { xs: '24px', md: '28px' }, pb: '30px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
+        <Typography sx={{ fontWeight: 600, fontSize: { xs: '24px', md: '28px' }, pb: '10px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', display: 'block' }}>
           Browser Extension / Wallet
+        </Typography>
+      </Grid>
+      <Grid container justifyContent='center' item >
+        <Typography sx={{ fontWeight: 400, fontSize: { xs: '18px', md: '22px' }, pb: '30px', px: '10px', textAlign: 'center', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)', }}>
+          Unlock the full potential of the Polkadot ecosystem securely right in your browser.
         </Typography>
       </Grid>
       <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }} spacing={2}>
@@ -76,10 +81,10 @@ const PG = () => {
         </Grid>
       </Grid>
       <Grid item md={12} mx={{ sx: 2, md: 17 }}>
-        <Typography variant="subtitle1" sx={{ pt: 4, textAlign: { md: "left", xs: 'justify' }, px:{xs:'10px', md:'auto'} }} color="#180710">
-          Polkagate is a non-custodial wallet that allows you to securely store, manage, and interact with your Polkadot and Kusama assets. It offers a user-friendly interface and easy access to the Polkadot and Kusama ecosystems, allowing you to participate in staking, crowdloans, and other activities.
-          With Polkagate, you are in complete control of your assets, as your private keys are stored securely on your device, and you can easily manage multiple accounts and switch between them with ease.
-          Polkagate is an essential tool for anyone looking to participate in the growing Polkadot and Kusama ecosystems.
+        <Typography variant="subtitle1" sx={{ pt: 4, textAlign: { md: "left", xs: 'justify' }, px: { xs: '10px', md: 'auto' } }} color="#180710">
+          PolkaGate browser extension/wallet is a non-custodial wallet that allows you to securely store, manage, and interact with your Polkadot and Kusama assets. It offers a user-friendly interface and easy access to the Polkadot and Kusama ecosystems, allowing you to participate in staking, crowdloans, and other activities.
+          With PolkaGate, you are in complete control of your assets, as your private keys are stored securely on your device, and you can easily manage multiple accounts and switch between them with ease.
+          PolkaGate is an essential tool for anyone looking to participate in the growing Polkadot and Kusama ecosystems.
         </Typography>
       </Grid>
       <Grid container item justifyContent='center' spacing={1}>
