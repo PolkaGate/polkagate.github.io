@@ -37,14 +37,14 @@ function Pools() {
       />
       <Pool
         index={18}
-        name='PolkaGate ❤️ | https://polkagate.xyz'
+        name='❤️ PolkaGate 🐦‍⬛ | https://polkagate.xyz'
         token='KSM'
         decimal={12}
         tokenPrice={prices?.kusama?.usd}
       />
       <Grid container justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, px: { xs: '10px', md: 'auto' } }}>
         <Link href="https://www.youtube.com/watch?v=ErSKuhSGuKA" color="#e73188" underline="hover">
-        <Grid alignItems='center' container item>
+        <Grid alignItems='center' justifyContent='center' container item mx='10px'>
             <YouTubeIcon fontSize="large" />
             Watch how to join a pool using the PolkaGate extension
           </Grid>

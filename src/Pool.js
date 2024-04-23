@@ -40,7 +40,6 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
   const stakedInUsd = info?.stashIdAccount?.stakingLedger?.active && tokenPrice &&
     `${(parseFloat(amountToHuman(info.stashIdAccount.stakingLedger.active, decimal)) * tokenPrice).toLocaleString()} USD`;
 
-  console.log('info:', info)
   const subscanLink = (i) => `https://${token === 'DOT' ? 'Polkadot' : 'kusama'}.subscan.io/nomination_pool/${String(i)}`;
 
   return (

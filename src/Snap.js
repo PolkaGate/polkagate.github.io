@@ -116,7 +116,7 @@ const Snap = () => {
       </Grid>
       <Grid container  justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, pt: '40px', px: { xs: '10px', md: 'auto' } }}>
         <Link href="https://youtu.be/BnQYDETCeGY" color="#e73188" underline="hover">
-          <Grid alignItems='center' container item>
+          <Grid alignItems='center' justifyContent='center' container item mx='10px'>
             <YouTubeIcon fontSize="large" />
             Watch a demo of how to use the MetaMask PolkaGate Snap
           </Grid>
