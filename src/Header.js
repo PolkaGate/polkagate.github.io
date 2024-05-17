@@ -31,7 +31,7 @@ function Header() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid item container justifyContent='flex-end' alignItems='flex-end' sx={{ px: '20px' }} md={4}>
+      <Grid item container justifyContent='flex-end' alignItems='flex-end' md={4}>
         <PGMenu />
       </Grid>
     </Grid >
