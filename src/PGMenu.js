@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import {Grid, Button} from '@mui/material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -8,7 +8,7 @@ export default function PGMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
-  const handleClick = (event) => {
+  const handleProductClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -19,15 +19,19 @@ export default function PGMenu() {
   const gotoApps = () => {
     window.open("https://apps.polkagate.xyz");
   };
+ 
+  const gotoDocs = () => {
+    window.open("https://support.polkadot.network/support/solutions/folders/65000157854");
+  };
 
   return (
-    <>
+    <Grid container item justifyContent='flex-end' sx={{ flexWrap:'nowrap', width:'100%'}}>
       <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
+        onClick={handleProductClick}
         sx={{ fontSize: 15, p: 'auto', color: '#e73188' }}
       >
         Products
@@ -56,10 +60,20 @@ export default function PGMenu() {
             Staking pools
           </MenuItem>
         </Link>
-        <MenuItem onClick={gotoApps} sx={{color:"blue"}}>
+        <MenuItem onClick={gotoApps} sx={{ color: "blue" }}>
           Apps
         </MenuItem>
       </Menu>
+      <Button
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={gotoDocs}
+        sx={{ fontSize: 15, p: 'auto', color: '#e73188' }}
+      >
+      Docs
+      </Button>
       <Link smooth to="/#team">
         <Button
           sx={{ fontSize: 15, color: '#e73188' }}
@@ -67,7 +81,6 @@ export default function PGMenu() {
           Team
         </Button>
       </Link>
-
       <Link smooth to="/#contacts">
         <Button
           sx={{ fontSize: 15, color: '#e73188' }}
@@ -75,6 +88,6 @@ export default function PGMenu() {
           Contacts
         </Button>
       </Link>
-    </>
+    </Grid>
   );
 }
