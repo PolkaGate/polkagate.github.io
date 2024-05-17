@@ -18,11 +18,12 @@ const PG = () => {
   }, []);
 
   const handleOpenEdge = useCallback(() => {
-    window.open(
-      "https://microsoftedge.microsoft.com/addons/detail/polkagate-the-gateway-to/eakellaeidmgcpifaofebhpcjienkajp",
-      "_blank"
-    );
-  }, []);
+    handleOpenChrome();
+    // window.open(
+    //   "https://microsoftedge.microsoft.com/addons/detail/polkagate-the-gateway-to/eakellaeidmgcpifaofebhpcjienkajp",
+    //   "_blank"
+    // );
+  }, [handleOpenChrome]);
 
 
   return (
