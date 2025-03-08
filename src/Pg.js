@@ -49,7 +49,7 @@ const PG = () => {
               borderRadius: '2%',
             }}
             alt="intro"
-            src="images/pg/homeDark.svg"
+            src="images/pg/home.png"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={10} md={3}>
@@ -57,13 +57,9 @@ const PG = () => {
             component="img"
             sx={{
               maxWidth: { xs: '100%' },
-              border: 1,
-              borderColor: 'white',
-              borderRadius: '8px',
-              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
             alt="intro"
-            src="images/pg/rewards.svg"
+            src="images/pg/rewards.png"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={10} md={3}>
@@ -71,13 +67,9 @@ const PG = () => {
             component="img"
             sx={{
               maxWidth: { xs: '100%' },
-              border: 1,
-              borderColor: 'white',
-              borderRadius: '8px',
-              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
             alt="intro"
-            src="images/pg/pool.svg"
+            src="images/pg/pool.png"
           />
         </Grid>
       </Grid>

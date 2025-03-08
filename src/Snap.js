@@ -37,12 +37,9 @@ const Snap = () => {
             component="img"
             sx={{
               maxWidth: { xs: '100%' },
-              border: 1,
-              borderColor: 'white',
-              borderRadius: '2%',
             }}
             alt="connection"
-            src="images/snap/connection.png"
+            src="images/snap/home.png"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={10} md={3}>
@@ -50,13 +47,9 @@ const Snap = () => {
             component="img"
             sx={{
               maxWidth: { xs: '100%' },
-              border: 1,
-              borderColor: 'white',
-              borderRadius: '8px',
-              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
             alt="onInstall"
-            src="images/snap/onInstall.png"
+            src="images/snap/staking.png"
           />
         </Grid>
         <Grid container justifyContent='center' item xs={10} md={3}>
@@ -64,13 +57,9 @@ const Snap = () => {
             component="img"
             sx={{
               maxWidth: { xs: '100%' },
-              border: 1,
-              borderColor: 'white',
-              borderRadius: '8px',
-              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
             alt="transaction"
-            src="images/snap/tx.png"
+            src="images/snap/stakingHome.png"
           />
         </Grid>
       </Grid>
@@ -114,11 +103,11 @@ const Snap = () => {
           </Button>
         </Grid>
       </Grid>
-      <Grid container  justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, pt: '40px', px: { xs: '10px', md: 'auto' } }}>
-        <Link href="https://youtu.be/BnQYDETCeGY" color="#e73188" underline="hover">
+      <Grid container justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, pt: '40px', px: { xs: '10px', md: 'auto' } }}>
+        <Link href="https://youtu.be/vtDf74-FId8?feature=shared" color="#e73188" underline="hover"  target="_blank" rel="noopener noreferrer">
           <Grid alignItems='center' justifyContent='center' container item mx='10px'>
             <YouTubeIcon fontSize="large" />
-            Watch a demo of how to use the MetaMask PolkaGate Snap
+            Watch this guide on staking with the PolkaGate MetaMask Snap.
           </Grid>
         </Link>
       </Grid>
