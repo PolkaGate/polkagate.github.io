@@ -43,9 +43,9 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
   const subscanLink = (i) => `https://${token === 'DOT' ? 'Polkadot' : 'kusama'}.subscan.io/nomination_pool/${String(i)}`;
 
   return (
-    <Grid item md={5.8} xs={12} sx={{ textAlign: "center", pb: 2, mb: '20px', mx: '10px' }}>
+    <Grid item md={5.8} xs={12} sx={{ textAlign: "center", pb: 2, mb: '10px', mx: '10px' }}>
       <Card elevation={18} borderRadius='50%' >
-        <CardContent>
+        <CardContent sx={{ padding:'15px 20px 0'}}>
           <Grid component='img' src={`images/chains/${token}.svg`} width='50px' height='50px' sx={{ borderRadius: '50%' }} />
           <Grid container>
             <Grid container item width='fit-content' mr='10px'>
@@ -108,7 +108,7 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
           </Grid>
           <Grid container justifyContent='flex-end' >
             <Link
-              href={`${subscanLink(index)}`} 
+              href={`${subscanLink(index)}`}
               rel='noreferrer'
               target='_blank'
               underline='none'
@@ -117,11 +117,11 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
             </Link>
           </Grid>
         </CardContent>
-        <CardActions>
+        {/* <CardActions>
           <Grid container justifyContent='flex-end' >
-            {/* <Button size="small">Join</Button> */}
+            <Button size="small">Join</Button>
           </Grid>
-        </CardActions>
+        </CardActions> */}
       </Card>
     </Grid>
   );

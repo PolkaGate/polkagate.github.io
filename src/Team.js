@@ -8,7 +8,7 @@ function Team() {
     <Grid id='team'
       container
       justifyContent="center"
-      sx={{ px: " 30px", py: "60px", color: "white", bgcolor: hexToRgba("#e6007a", 0.9), position: 'inherit' }}
+      sx={{ px: " 30px", p: "30px 0 10px", color: "white", bgcolor: hexToRgba("#e6007a", 0.9), position: 'inherit' }}
     >
       <Grid item xs={12} sx={{ textAlign: "center", pb: 2 }}>
         <Typography
@@ -18,9 +18,9 @@ function Team() {
         >
           Meet Our Team
         </Typography>
-        <Typography style={{ display: "inline-block" }} variant="body1">
+        {/* <Typography style={{ display: "inline-block" }} variant="body1">
           {'   '}{"{We are hiring}"}
-        </Typography>
+        </Typography> */}
       </Grid>
       <Member
         src={"/images/avatar/kami.jpg"}
@@ -34,6 +34,12 @@ function Team() {
         title={"CFO"}
         link={"mchalaki"}
       />
+       <Member
+        src={"/images/avatar/amir.jpg"}
+        name={"Amir Ekbatani"}
+        title={"Test engineer - Front-end dev."}
+        link={"amir-ekbatani-4b7399201"}
+      />
       <Member
         src={"/images/avatar/mehran.jpg"}
         name={"Dr. Mehran Pourvahab"}
@@ -46,18 +52,13 @@ function Team() {
         title={"UI/UX specialist"}
         link={"mehranazarbad"}
       />
-      <Member
-        src={"/images/avatar/amir.jpg"}
-        name={"Amir Ekbatani"}
-        title={"Test engineer - Front-end dev."}
-        link={"amir-ekbatani-4b7399201"}
-      />
-      <Member
+     
+      {/* <Member
         src={"/images/avatar/frontEndDeveloperAvatar.jpeg"}
         name={"John Doe"}
         title={"Front-end dev."}
         link={""}
-      />
+      /> */}
     </Grid>
   );
 }

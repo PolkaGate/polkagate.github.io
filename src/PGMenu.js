@@ -32,7 +32,7 @@ export default function PGMenu() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleProductClick}
-        sx={{ fontSize: 15, p: 'auto', color: '#e73188' }}
+        sx={{ fontSize: 13, p: 'auto', color: '#e73188' }}
       >
         Products
       </Button>
@@ -70,20 +70,20 @@ export default function PGMenu() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={gotoDocs}
-        sx={{ fontSize: 15, p: 'auto', color: '#e73188' }}
+        sx={{ fontSize: 13, p: 'auto', color: '#e73188' }}
       >
       Docs
       </Button>
       <Link smooth to="/#team">
         <Button
-          sx={{ fontSize: 15, color: '#e73188' }}
+          sx={{ fontSize: 13, color: '#e73188' }}
         >
           Team
         </Button>
       </Link>
       <Link smooth to="/#contacts">
         <Button
-          sx={{ fontSize: 15, color: '#e73188' }}
+          sx={{ fontSize: 13, color: '#e73188' }}
         >
           Contacts
         </Button>

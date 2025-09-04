@@ -5,6 +5,7 @@ import {
   AutoAwesome as AutoAwesomeIcon,
   Api as ApiIcon,
 } from "@mui/icons-material";
+import { MAX_WIDTH } from "./util/constants";
 
 function Features() {
   const Feature = ({ icon, title, text }) => (
@@ -20,26 +21,25 @@ function Features() {
   );
 
   return (
-    <Grid container spacing={2} sx={{ px: { xs: '30px', md: "150px" }, py: "50px", position: 'relative' }}>
+    <Grid container spacing={2} sx={{ maxWidth:MAX_WIDTH, px: { xs: '30px', md: "150px" }, pt: "20px", position: 'relative' }}>
       <Feature
         icon={<CenterFocusWeakIcon color="warning" sx={{ fontSize: 50 }} />}
-        title={"Simple User Interface"}
+        title={"Secure & Simple UI"}
         text={
-          "Feel comfortable, focusing on what's important, by creating a stylized but instantly recognizable UI"
-        }
+          "A non-custodial interface that keeps your assets safe while making management effortless."        }
       />
       <Feature
         icon={<AutoAwesomeIcon color="success" sx={{ fontSize: 50 }} />}
-        title={" Efficient User Experience"}
+        title={"Efficient User Experience"}
         text={
-          "Efficiently and quickly get most of the common functionalities done on Kusama/Polkadot blockchains"
+          "Perform common tasks on Kusama/Polkadot quickly and efficiently."
         }
       />
       <Feature
         icon={<ApiIcon color="error" sx={{ fontSize: 50 }} />}
-        title={"  Agile Developments"}
+        title={"Agile Developments"}
         text={
-          "Analyzing circumstances and user needs and adapt to the constantly evolving blockchain technology"
+          "Adapt rapidly to evolving blockchain technologies by analyzing user needs and circumstances."
         }
       />
     </Grid>
