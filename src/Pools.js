@@ -44,7 +44,7 @@ function Pools() {
           decimal={12}
           tokenPrice={prices?.kusama?.usd}
         />
-        <Grid container justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, px: { xs: '10px', md: 'auto' } }}>
+        <Grid container item justifyContent='center' sx={{ fontSize: '20px', fontWeight: 800, px: { xs: '10px', md: 'auto' } }}>
           <Link href="https://www.youtube.com/watch?v=ErSKuhSGuKA" color="#e73188" underline="hover" target="_blank" rel="noopener noreferrer">
             <Grid alignItems='center' justifyContent='center' container item mx='10px'>
               <YouTubeIcon fontSize="large" />

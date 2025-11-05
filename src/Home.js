@@ -25,7 +25,7 @@ const Home = () => {
   }, []);
 
   const particlesLoaded = useCallback(async container => {
-    await console.log(container);
+    !!container && await console.log('particlesLoaded');
   }, []);
 
   return (

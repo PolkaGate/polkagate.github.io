@@ -10,8 +10,8 @@ import { BN, hexToBn, isHex } from '@polkadot/util';
 export const isHexToBn = (i) => isHex(i) ? hexToBn(i) : new BN(i);
 export default function usePool(id){
   const endpoint = id === 8
-    ? 'wss://polkadot-rpc.dwellir.com'
-    : 'wss://kusama-rpc.dwellir.com'
+    ? 'wss://asset-hub-polkadot.dotters.network'
+    : 'wss://asset-hub-kusama.dotters.network'
 
   const [myPool, setMyPool] = useState();
 

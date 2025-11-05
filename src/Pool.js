@@ -40,11 +40,11 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
   const stakedInUsd = info?.stashIdAccount?.stakingLedger?.active && tokenPrice &&
     `${(parseFloat(amountToHuman(info.stashIdAccount.stakingLedger.active, decimal)) * tokenPrice).toLocaleString()} USD`;
 
-  const subscanLink = (i) => `https://${token === 'DOT' ? 'Polkadot' : 'kusama'}.subscan.io/nomination_pool/${String(i)}`;
+  const subscanLink = (i) => `https://AssetHub-${token === 'DOT' ? 'Polkadot' : 'kusama'}.subscan.io/nomination_pool/${String(i)}`;
 
   return (
     <Grid item md={5.8} xs={12} sx={{ textAlign: "center", pb: 2, mb: '10px', mx: '10px' }}>
-      <Card elevation={18} borderRadius='50%' >
+      <Card elevation={18} sx={{ borderRadius:'2%' }} >
         <CardContent sx={{ padding:'15px 20px 0'}}>
           <Grid component='img' src={`images/chains/${token}.svg`} width='50px' height='50px' sx={{ borderRadius: '50%' }} />
           <Grid container>
