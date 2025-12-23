@@ -43,86 +43,77 @@ const Pool = ({ index, name, token, decimal, tokenPrice }) => {
   const subscanLink = (i) => `https://AssetHub-${token === 'DOT' ? 'Polkadot' : 'kusama'}.subscan.io/nomination_pool/${String(i)}`;
 
   return (
-    <Grid item md={5.8} xs={12} sx={{ textAlign: "center", pb: 2, mb: '10px', mx: '10px' }}>
-      <Card elevation={18} sx={{ borderRadius:'2%' }} >
-        <CardContent sx={{ padding:'15px 20px 0'}}>
-          <Grid component='img' src={`images/chains/${token}.svg`} width='50px' height='50px' sx={{ borderRadius: '50%' }} />
-          <Grid container>
-            <Grid container item width='fit-content' mr='10px'>
-              <Box component='img' src={`images/pools/${token}Pool.png`} width='50px' height='50px' />
+    <Grid item md={5.8} xs={12} sx={{ backgroundColor: '#fafaf8', textAlign: "center", padding: '15px 20px 0', borderRadius: '2%', pb: 2, mb: '10px', mx: '10px' }}>
+      <Grid component='img' src={`images/chains/${token}.svg`} width='50px' height='50px' sx={{ borderRadius: '50%' }} />
+      <Grid color='#1b1917' container>
+        <Grid container item width='fit-content' mr='10px'>
+          <Box component='img' src={`images/pools/${token}Pool.png`} width='50px' height='50px' />
+        </Grid>
+        <Grid container item xs >
+          <Grid item sx={12} my='4px'>
+            Pool Index: <strong>{index}</strong>
+          </Grid>
+          <Grid item xs={12} textAlign='left' my='4px'>
+            Name: <b>{name}</b>
+          </Grid>
+          <Grid item container xs={12} textAlign='left' my='4px'>
+            <Grid item>
+              Members:
             </Grid>
-            <Grid container item xs >
-              <Grid item sx={12} my='4px'>
-                Pool Index: <strong>{index}</strong>
-              </Grid>
-              <Grid item xs={12} textAlign='left' my='4px'>
-                Name: <b>{name}</b>
-              </Grid>
-              <Grid item container xs={12} textAlign='left' my='4px'>
-                <Grid item>
-                  Members:
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
-                  <ShowValue value={info?.bondedPool?.memberCounter} />
-                </Grid>
-              </Grid>
-              <Grid container item justifyContent='flex-start' my='4px'>
-                <Grid item>
-                  Total staked:
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
-                  <ShowBalance balance={info?.stashIdAccount?.stakingLedger?.active} decimal={decimal} token={token} />
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, mx: '15px' }}>
-                  |
-                </Grid>
-                <Grid item sx={{ fontWeight: 600 }}>
-                  <ShowValue value={stakedInUsd} />
-                </Grid>
-              </Grid>
-              <Grid container item justifyContent='flex-start' my='4px'>
-                <Grid item>
-                  Distributed Rewards:
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
-                  <ShowBalance balance={info?.rewardPool?.totalRewardsClaimed} decimal={decimal} token={token} />
-                </Grid>
-              </Grid>
-              <Grid container item justifyContent='flex-start' my='4px'>
-                <Grid item>
-                  Unclaimed Rewards:
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
-                  <ShowBalance balance={info?.rewardClaimable} decimal={decimal} token={token} />
-                </Grid>
-              </Grid>
-              <Grid container item justifyContent='flex-start' my='4px'>
-                <Grid item>
-                  Pool Commission:
-                </Grid>
-                <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
-                  <ShowValue value={`${info?.bondedPool?.commission?.current ? info.bondedPool.commission.current[0] : 0}%`} />
-                </Grid>
-              </Grid>
+            <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
+              <ShowValue value={info?.bondedPool?.memberCounter} />
             </Grid>
           </Grid>
-          <Grid container justifyContent='flex-end' >
-            <Link
-              href={`${subscanLink(index)}`}
-              rel='noreferrer'
-              target='_blank'
-              underline='none'
-            >
-              <Box component='img' src={`images/subscan.svg`} width='30px' height='30px' />
-            </Link>
+          <Grid container item justifyContent='flex-start' my='4px'>
+            <Grid item>
+              Total staked:
+            </Grid>
+            <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
+              <ShowBalance balance={info?.stashIdAccount?.stakingLedger?.active} decimal={decimal} token={token} />
+            </Grid>
+            <Grid item sx={{ fontWeight: 600, mx: '15px' }}>
+              |
+            </Grid>
+            <Grid item sx={{ fontWeight: 600 }}>
+              <ShowValue value={stakedInUsd} />
+            </Grid>
           </Grid>
-        </CardContent>
-        {/* <CardActions>
-          <Grid container justifyContent='flex-end' >
-            <Button size="small">Join</Button>
+          <Grid container item justifyContent='flex-start' my='4px'>
+            <Grid item>
+              Distributed Rewards:
+            </Grid>
+            <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
+              <ShowBalance balance={info?.rewardPool?.totalRewardsClaimed} decimal={decimal} token={token} />
+            </Grid>
           </Grid>
-        </CardActions> */}
-      </Card>
+          <Grid container item justifyContent='flex-start' my='4px'>
+            <Grid item>
+              Unclaimed Rewards:
+            </Grid>
+            <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
+              <ShowBalance balance={info?.rewardClaimable} decimal={decimal} token={token} />
+            </Grid>
+          </Grid>
+          <Grid container item justifyContent='flex-start' my='4px'>
+            <Grid item>
+              Pool Commission:
+            </Grid>
+            <Grid item sx={{ fontWeight: 600, ml: '10px' }}>
+              <ShowValue value={`${info?.bondedPool?.commission?.current ? info.bondedPool.commission.current[0] : 0}%`} />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid container justifyContent='flex-end' >
+        <Link
+          href={`${subscanLink(index)}`}
+          rel='noreferrer'
+          target='_blank'
+          underline='none'
+        >
+          <Box component='img' src={`images/subscan.svg`} width='30px' height='30px' />
+        </Link>
+      </Grid>
     </Grid>
   );
 }
