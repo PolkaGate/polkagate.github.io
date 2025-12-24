@@ -1,19 +1,21 @@
-import * as React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
 import smoothScrollPolyfill from 'smoothscroll-polyfill';
-import App  from './App';
-import './index.css'; // Import the CSS file
+import App from './App';
+import theme from './theme'; // <-- import your theme
+import './index.css';
 
 smoothScrollPolyfill.polyfill();
-// Add global font family
-document.body.style.fontFamily = "Inter";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );

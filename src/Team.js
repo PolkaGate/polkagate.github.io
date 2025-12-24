@@ -1,18 +1,17 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Member from "./Member";
-import { hexToRgba } from './util/utils';
 
 function Team() {
   return (
     <Grid id='team'
       container
       justifyContent="center"
-      sx={{ px: " 30px", p: "30px 0 10px", color: "white", bgcolor: hexToRgba("#e6007a", 0.9), position: 'inherit' }}
+      sx={{ px: " 30px", py: "60px", color: "white", bgcolor: '#fafaf8', position: 'inherit' }}
     >
       <Grid item xs={12} sx={{ textAlign: "center", pb: 2 }}>
         <Typography
-          style={{ display: "inline-block" }}
+          style={{ color:'#1b1917', display: "inline-block" }}
           variant="h5"
           fontWeight={700}
         >

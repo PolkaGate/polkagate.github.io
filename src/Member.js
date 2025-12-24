@@ -11,19 +11,20 @@ function Member({ src, name, link, title }) {
         mb={3}
       >
         <Avatar src={src} sx={{  width: 130, height: 130 }} />
-        <Typography align="center" variant="subtitle2">
+        <Typography align="center">
           <Link
             href={`https://www.linkedin.com/in/${link}`}
             underline="none"
             color="inherit"
             target="_blank"
             rel="noopener"
-            fontWeight={700}
+            fontWeight={600}
+            sx={{ color:'#1b1917'}}
           >
             {name}
           </Link>
         </Typography>
-        <Typography align="center" variant="body2" fontStyle='oblique'>
+        <Typography align="center" sx={{ color:'#1b1917', fontSize: '15px'}}>
           {title}
         </Typography>
       </Stack>

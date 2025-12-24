@@ -12,7 +12,7 @@ function Footer() {
   }, []);
 
   return (
-    <Grid id='contacts' container justifyContent="center" sx={{ p: " 60px", color: "white", bgcolor: "#172026", position: 'inherit' }} >
+    <Grid id='contacts' container justifyContent="center" sx={{ p: " 60px", color: "white", bgcolor: "#0f0f0f", position: 'inherit' }} >
       <Grid  container justifyContent="center" sx={{ maxWidth:MAX_WIDTH }} >
         <Stack
           direction="row" 

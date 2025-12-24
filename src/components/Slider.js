@@ -30,7 +30,7 @@ export default function ImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // 3000ms = 3 seconds
+    }, 6000); // 3000ms = 3 seconds
 
     return () => clearInterval(interval); // cleanup on unmount
   }, []);

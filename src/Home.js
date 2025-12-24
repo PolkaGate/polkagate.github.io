@@ -7,7 +7,8 @@ import Team from "./Team";
 import Footer from "./Footer";
 import Header from "./Header";
 import Pools from "./Pools";
-import Pg from "./Pg";
+import Extension from "./Extension";
+import Polkagate from "./Polkagate";
 import Snap from "./Snap";
 
 import { useCallback } from "react";
@@ -36,13 +37,14 @@ const Home = () => {
         options={options}
       />
       <Header />
-      <Pg />
+      <Polkagate />
       <Features />
+      <Extension />
       <Snap />
       <Pools />
       <Team />
       <Footer />
-    </Grid> 
+    </Grid>
   );
 }
 
