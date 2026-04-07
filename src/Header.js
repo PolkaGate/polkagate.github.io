@@ -14,30 +14,41 @@ function Header() {
         height: '1px',
         backgroundColor: 'rgba(229,231,235,0.15)',
       },
-      backgroundColor: '#0f0f0f', px: "20px",height: { md:'63px'}, position: 'relative'
-    }}    >
-      <Grid container justifyContent='space-between' >
-        <Grid alignItems='center' container item justifyContent='flex-start' spacing={2} md>
-          <Grid item container mx='auto' width='fit-content'>
+      backgroundColor: '#0f0f0f',
+      px: { xs: "14px", md: "20px" },
+      minHeight: { xs: '56px', md: '63px' },
+      position: 'relative'
+    }}>
+      <Grid container justifyContent='space-between' alignItems='center' sx={{ flexWrap: 'nowrap' }}>
+        <Grid item>
+          <Grid alignItems='center' container wrap='nowrap' spacing={1.25}>
+            <Grid item>
             <Box
               component="img"
               alt="logo"
               src="images/pg.png"
               sx={{
-                width: 100,
-                height: 100,
-                maxHeight: { xs: 24, md: 26 },
-                maxWidth: { xs: 24, md: 26 },
+                width: { xs: 22, md: 26 },
+                height: { xs: 22, md: 26 },
               }}
             />
-          </Grid>
-          <Grid item xs={12} md>
-            <Typography color='#f5f5f4' variant="h2" sx={{ fontSize: '20px', textAlign: { xs: 'center', md: 'left' } }}>
-              PolkaGate
-            </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                color='#f5f5f4'
+                variant="h2"
+                sx={{
+                  fontSize: { xs: '18px', md: '20px' },
+                  lineHeight: 1,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                PolkaGate
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-        <Grid item container justifyContent='flex-end' alignItems='flex-end' md={4}>
+        <Grid item sx={{ minWidth: 'fit-content' }}>
           <PGMenu />
         </Grid>
       </Grid >
