@@ -1,4 +1,5 @@
 import { Fade, Grid, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { initBg } from "./bg.js";
 import { useEffect, useRef, useState } from "react";
 
@@ -8,6 +9,7 @@ const texts = [
 ]
 
 const Polkagate = () => {
+  const theme = useTheme();
   const bgRef = useRef();
 
   const [index, setIndex] = useState(0);
@@ -15,10 +17,10 @@ const Polkagate = () => {
 
   useEffect(() => {
     if (bgRef.current) {
-      const cleanup = initBg(bgRef.current);
+      const cleanup = initBg(bgRef.current, theme.palette.mode);
       return () => cleanup();
     }
-  }, []);
+  }, [theme.palette.mode]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,7 +39,7 @@ const Polkagate = () => {
       container
       alignItems='center'
       justifyContent="center"
-      sx={{ height: window.innerHeight, position: 'relative', overflow: "hidden" }}
+      sx={{ height: window.innerHeight, position: 'relative', overflow: "hidden", backgroundColor: theme.palette.section.hero }}
     >
       {/* Background canvas */}
       <div
@@ -55,7 +57,7 @@ const Polkagate = () => {
       <Grid container justifyContent="center" justifyItems='center' sx={{ position: 'relative' }}>
         <Typography
           variant='h1'
-          color="#fff"
+          color={theme.palette.text.primary}
           sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -69,7 +71,7 @@ const Polkagate = () => {
 
         <Fade in={show} timeout={1000} key={index}>
           <Typography
-            color="#ffffffb0"
+            color={theme.palette.text.secondary}
             sx={{
               display: 'flex',
               justifyContent: 'center',

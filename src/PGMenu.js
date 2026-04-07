@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Grid, Button, IconButton, Divider, Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { HashLink as Link } from 'react-router-hash-link';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function PGMenu() {
+  const theme = useTheme();
   const [productAnchorEl, setProductAnchorEl] = React.useState(null);
   const [mobileAnchorEl, setMobileAnchorEl] = React.useState(null);
   const productOpen = Boolean(productAnchorEl);
@@ -30,13 +32,13 @@ export default function PGMenu() {
   const gotoApps = () => {
     handleClose();
     handleMobileClose();
-    window.open("https://apps.polkagate.xyz");
+    window.open("https://apps.polkagate.xyz", "_blank", "noopener,noreferrer");
   };
 
   const gotoDocs = () => {
     handleClose();
     handleMobileClose();
-    window.open("https://docs.polkagate.xyz");
+    window.open("https://docs.polkagate.xyz", "_blank", "noopener,noreferrer");
   };
 
   const closeAllMenus = () => {
@@ -46,22 +48,22 @@ export default function PGMenu() {
 
   const menuStyle = {
     '&:hover': {
-      color: '#FFFFFF',
+      color: theme.palette.text.primary,
       backgroundColor: 'transparent',
-    }, fontSize: '14px', fontWeight: 300, p: 'auto', color: 'rgba(255,255,255,0.72)', letterSpacing: '0.02em', textTransform: 'none', transition: 'color 150ms ease',
+    }, fontSize: '14px', fontWeight: 300, p: 'auto', color: theme.palette.text.secondary, letterSpacing: '0.02em', textTransform: 'none', transition: 'color 150ms ease',
   };
 
-  const subMenuStyle = { fontSize: '14px', color: "#1b1917" };
+  const subMenuStyle = { fontSize: '14px', color: theme.palette.text.primary };
   const mobileMenuItemStyle = {
     fontSize: '15px',
     minWidth: 220,
     py: 1.2,
-    color: '#f5f5f4',
+    color: theme.palette.text.primary,
   };
   const mobileSubMenuItemStyle = {
     ...mobileMenuItemStyle,
     pl: 4,
-    color: 'rgba(245,245,244,0.82)',
+    color: theme.palette.text.secondary,
     fontSize: '14px',
   };
 
@@ -131,7 +133,7 @@ export default function PGMenu() {
           aria-expanded={mobileOpen ? 'true' : undefined}
           aria-haspopup="true"
           onClick={handleMobileMenuClick}
-          sx={{ color: '#f5f5f4' }}
+          sx={{ color: theme.palette.text.primary }}
         >
           <MenuIcon />
         </IconButton>
@@ -146,9 +148,9 @@ export default function PGMenu() {
             sx: {
               mt: 1,
               minWidth: 250,
-              backgroundColor: '#111113',
-              border: '1px solid rgba(255,255,255,0.08)',
-              color: '#f5f5f4',
+              backgroundColor: theme.palette.background.paper,
+              border: `1px solid ${theme.palette.divider}`,
+              color: theme.palette.text.primary,
             },
           }}
         >
@@ -173,7 +175,7 @@ export default function PGMenu() {
           <MenuItem onClick={gotoApps} sx={mobileSubMenuItemStyle}>
             Apps
           </MenuItem>
-          <Divider sx={{ borderColor: 'rgba(255,255,255,0.08)' }} />
+          <Divider sx={{ borderColor: theme.palette.divider }} />
           <MenuItem onClick={gotoDocs} sx={mobileMenuItemStyle}>
             Docs
           </MenuItem>

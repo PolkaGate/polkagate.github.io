@@ -1,22 +1,45 @@
 
-import { Avatar, Grid, Typography, Button } from "@mui/material";
+import { Avatar, Box, Grid, Typography, Button } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { useCallback } from "react";
+import { Key as KeyIcon, Layers as LayersIcon, Shield as ShieldIcon } from "@mui/icons-material";
 import ImageSlider from "./components/Slider";
 import { MAX_WIDTH } from "./util/constants";
 
+const extensionBenefits = [
+  {
+    icon: ShieldIcon,
+    title: 'Non-custodial control',
+    text: 'Keep your keys on your device while managing Polkadot ecosystem accounts yourself.',
+  },
+  {
+    icon: LayersIcon,
+    title: 'Polkadot + Kusama',
+    text: 'Work across the core ecosystems from one extension interface built for day-to-day use.',
+  },
+  {
+    icon: KeyIcon,
+    title: 'Multi-account access',
+    text: 'Create, import, and switch accounts without losing the flow between actions.',
+  },
+];
 
 const Extension = () => {
+  const theme = useTheme();
+
   const handleOpenFirefox = useCallback(() => {
     window.open(
       "https://addons.mozilla.org/en-US/firefox/addon/polkagate/",
-      "_blank"
+      "_blank",
+      "noopener,noreferrer"
     );
   }, []);
 
   const handleOpenChrome = useCallback(() => {
     window.open(
       "https://chrome.google.com/webstore/detail/polkagate/ginchbkmljhldofnbjabmeophlhdldgp",
-      "_blank"
+      "_blank",
+      "noopener,noreferrer"
     );
   }, []);
 
@@ -28,41 +51,96 @@ const Extension = () => {
     // );
   }, [handleOpenChrome]);
 
-  const buttonStyle = {
-    borderRadius:'16px',
-    height:{md:'56px'},
-    backgroundColor: '#f5f5f3',
-    color: '#0f0f0f', // set text color
+  const primaryButtonStyle = {
+    borderRadius: '999px',
+    minHeight: { xs: '52px', md: '56px' },
+    backgroundColor: '#f6efe7',
+    color: '#1b1917',
     width: '100%',
     minWidth: 'max-content',
-    '&:hover': {
-      backgroundColor: '#e0e0e0', // optional hover effect
+    border: '1px solid rgba(27,25,23,0.1)',
+    boxShadow: 'none',
+    '& .MuiButton-startIcon': {
+      color: '#1b1917',
     },
-  }
+    '& .MuiSvgIcon-root': {
+      color: '#1b1917',
+    },
+    '&:hover': {
+      backgroundColor: theme.palette.mode === 'light' ? '#fbf5ee' : '#f1dfeb',
+      borderColor: theme.palette.mode === 'light' ? 'rgba(231,49,136,0.28)' : 'rgba(231,49,136,0.5)',
+      color: '#1b1917',
+      boxShadow: 'none',
+    },
+    '&:hover .MuiButton-startIcon': {
+      color: '#1b1917',
+    },
+    '&:hover .MuiSvgIcon-root': {
+      color: '#1b1917',
+    },
+  };
 
   return (
-    <Grid id='pg' container justifyContent="center" sx={{ bgcolor: '#0f0f0f', py: "60px", position: 'relative' }}    >
-      <Grid id='pg' container justifyContent="center" justifyItems='center' sx={{ maxWidth: MAX_WIDTH, position: 'relative' }}    >
-        <Typography variant='h2' color="#fff" sx={{ display: 'flex', justifyContent: 'center', fontWeight: 600, fontSize: { xs: '20px', md: '30px' }, py: '10px', width: '100%' }}>
+    <Grid id='pg' container justifyContent="center" sx={{ bgcolor: theme.palette.section.dark, py: { xs: 7, md: 10 }, px: { xs: 2, md: 4 }, position: 'relative' }}>
+      <Grid id='pg' container justifyContent="center" justifyItems='center' sx={{ maxWidth: MAX_WIDTH, position: 'relative' }}>
+        <Box
+          sx={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: 32,
+            px: 1.75,
+            py: 0.625,
+            mb: 2.25,
+            borderRadius: '999px',
+            border: `1px solid ${theme.palette.divider}`,
+            color: theme.palette.primary.main,
+            backgroundColor: theme.palette.mode === 'light' ? 'rgba(231,49,136,0.06)' : 'rgba(231,49,136,0.12)',
+            fontSize: '12px',
+            fontWeight: 700,
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+          }}
+        >
+          Browser Wallet
+        </Box>
+        <Typography variant='h2' color={theme.palette.text.primary} sx={{ display: 'flex', justifyContent: 'center', fontWeight: 700, fontSize: { xs: '32px', md: '48px' }, lineHeight: 0.96, letterSpacing: '-0.03em', py: '10px', width: '100%' }}>
           Browser Extension / Wallet
         </Typography>
-        <Typography color="#ffffffb0" sx={{ display: 'flex', justifyContent: 'center', fontWeight: 400, fontSize: { xs: '14px', md: '16px' }, px: '10px', textAlign: 'center', width: '100%' }}>
-          Unlock the full potential of the Polkadot ecosystem securely right in your browser.
+        <Typography color={theme.palette.text.secondary} sx={{ display: 'flex', justifyContent: 'center', fontWeight: 400, fontSize: { xs: '15px', md: '17px' }, lineHeight: 1.7, px: '10px', textAlign: 'center', width: '100%', maxWidth: 780 }}>
+          Manage Polkadot and Kusama ecosystem accounts from a non-custodial browser wallet built for staking, account access, and everyday ecosystem interactions.
         </Typography>
-        <Grid container justifyContent="center" pt={{ xs: 1, md: 1, opacity:'0.8'}}>
+        <Grid container spacing={2} justifyContent="center" sx={{ mt: { xs: 2, md: 3 }, mb: { xs: 2, md: 3 } }}>
+          {extensionBenefits.map(({ icon: Icon, title, text }) => (
+            <Grid item xs={12} md={4} key={title}>
+              <Box
+                sx={{
+                  height: '100%',
+                  px: 2.5,
+                  py: 2.25,
+                  borderRadius: '24px',
+                  backgroundColor: theme.palette.mode === 'light' ? '#fffaf2' : '#18181b',
+                  border: `1px solid ${theme.palette.divider}`,
+                }}
+              >
+                <Icon sx={{ color: theme.palette.primary.main, fontSize: 24, mb: 1.25 }} />
+                <Typography sx={{ color: theme.palette.text.primary, fontWeight: 700, fontSize: '17px', mb: 0.75 }}>
+                  {title}
+                </Typography>
+                <Typography sx={{ color: theme.palette.text.secondary, fontSize: '14px', lineHeight: 1.65 }}>
+                  {text}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+        <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }}>
           <ImageSlider />
         </Grid>
-        <Grid item md={12} mx={{ sx: 2, md: 17 }}>
-          <Typography color="#fff" sx={{ fontWeight: 300, fontSize: '14px', pt: 4, textAlign: { md: "left", xs: 'justify' }, px: { xs: '10px', md: 'auto' } }}>
-            PolkaGate browser extension/wallet is a non-custodial wallet that allows you to securely store, manage, and interact with your Polkadot and Kusama assets. It offers a user-friendly interface and easy access to the Polkadot and Kusama ecosystems, allowing you to participate in staking, crowdloans, and other activities.
-            With PolkaGate, you are in complete control of your assets, as your private keys are stored securely on your device, and you can easily manage multiple accounts and switch between them with ease.
-            PolkaGate is an essential tool for anyone looking to participate in the growing Polkadot and Kusama ecosystems.
-          </Typography>
-        </Grid>
-        <Grid container item justifyContent='center' spacing={1} sx={{ mt: '20px' }}>
+        <Grid container item justifyContent='center' spacing={1.5} sx={{ mt: '20px' }}>
           <Grid item xs={11} md={3}>
             <Button
-              sx={buttonStyle}
+              sx={primaryButtonStyle}
               variant="contained"
               style={{ width: '100%', minWidth: 'max-content' }}
               startIcon={
@@ -79,7 +157,7 @@ const Extension = () => {
           </Grid>
           <Grid item xs={11} md={3}>
             <Button
-              sx={buttonStyle}
+              sx={primaryButtonStyle}
               variant="contained"
               style={{ width: '100%', minWidth: 'max-content' }}
               startIcon={
@@ -96,7 +174,7 @@ const Extension = () => {
           </Grid>
           <Grid item xs={11} md={3}>
             <Button
-              sx={buttonStyle}
+              sx={primaryButtonStyle}
               variant="contained"
               style={{ width: '100%', minWidth: 'max-content' }}
               startIcon={

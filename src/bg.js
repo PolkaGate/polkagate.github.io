@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import { ImprovedNoise } from 'three/examples/jsm/math/ImprovedNoise.js';
 
-export function initBg(container) {
+export function initBg(container, mode = 'dark') {
+  const isLight = mode === 'light';
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(
@@ -14,7 +15,7 @@ export function initBg(container) {
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x0f0f0f, 1); // dark background
+  renderer.setClearColor(isLight ? 0xf7f1ea : 0x0f0f0f, 1);
   container.appendChild(renderer.domElement);
 
   // PARTICLES
@@ -31,10 +32,10 @@ export function initBg(container) {
   geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
   const material = new THREE.PointsMaterial({
-    color: 0xffffff,
+    color: isLight ? 0x1b1917 : 0xffffff,
     size: 0.05,
     transparent: true,
-    opacity: 0.12,
+    opacity: isLight ? 0.06 : 0.12,
   });
 
   const particles = new THREE.Points(geometry, material);
@@ -42,8 +43,8 @@ export function initBg(container) {
 
   // LINES
   const lineMaterial = new THREE.LineBasicMaterial({
-    color: 0xffffff,
-    opacity: 0.03,
+    color: isLight ? 0x1b1917 : 0xffffff,
+    opacity: isLight ? 0.018 : 0.03,
     transparent: true,
   });
 
@@ -116,16 +117,18 @@ export function initBg(container) {
     renderer.render(scene, camera);
   }
 
-  window.addEventListener('resize', () => {
+  const onResize = () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-  });
+  };
+
+  window.addEventListener('resize', onResize);
 
   animate();
 
   return () => {
-    window.removeEventListener('resize', () => {});
+    window.removeEventListener('resize', onResize);
     renderer.dispose();
     container.removeChild(renderer.domElement);
   };
