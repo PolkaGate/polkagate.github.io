@@ -1,5 +1,6 @@
-import { Fade, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { AnimatePresence, motion } from "framer-motion";
 import { initBg } from "./bg.js";
 import { useEffect, useRef, useState } from "react";
 
@@ -13,7 +14,6 @@ const Polkagate = () => {
   const bgRef = useRef();
 
   const [index, setIndex] = useState(0);
-  const [show, setShow] = useState(true); // controls Fade in/out
 
   useEffect(() => {
     if (bgRef.current) {
@@ -24,11 +24,7 @@ const Polkagate = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setShow(false); // fade out
-      setTimeout(() => {
-        setIndex(prev => (prev + 1) % texts.length); // change text
-        setShow(true); // fade in
-      }, 500); // match Fade timeout
+      setIndex(prev => (prev + 1) % texts.length);
     }, 6000);
     return () => clearInterval(interval);
   }, []);
@@ -63,28 +59,60 @@ const Polkagate = () => {
             justifyContent: 'center',
             fontWeight: 600,
             fontSize: { xs: '30px', md: '96px' },
-            width: '100%'
+            width: '100%',
+            letterSpacing: { xs: '-0.02em', md: '-0.035em' },
+            lineHeight: 0.95,
           }}
         >
           PolkaGate
         </Typography>
 
-        <Fade in={show} timeout={1000} key={index}>
-          <Typography
-            color={theme.palette.text.secondary}
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              fontWeight: 200,
-              fontSize: { xs: '14px', md: '25px' },
-              px: '10px',
-              textAlign: 'center',
-              width: '100%',
-            }}
-          >
-            {texts[index]}
-          </Typography>
-        </Fade>
+        <Box
+          sx={{
+            position: 'relative',
+            width: '100%',
+            minHeight: { xs: 30, md: 46 },
+            mt: { xs: 1.25, md: 2 },
+            overflow: 'hidden',
+          }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 12, filter: 'blur(8px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, y: -12, filter: 'blur(8px)' }}
+              transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+              style={{
+                position: 'absolute',
+                inset: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Typography
+                color={theme.palette.text.secondary}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  fontWeight: 400,
+                  fontSize: { xs: '14px', md: '22px' },
+                  px: '10px',
+                  textAlign: 'center',
+                  width: '100%',
+                  letterSpacing: '0.01em',
+                  lineHeight: 1.2,
+                  textShadow: theme.palette.mode === 'dark'
+                    ? '0 0 18px rgba(0,0,0,0.35)'
+                    : '0 0 14px rgba(255,255,255,0.18)',
+                }}
+              >
+                {texts[index]}
+              </Typography>
+            </motion.div>
+          </AnimatePresence>
+        </Box>
       </Grid>
     </Grid>
   );
