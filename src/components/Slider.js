@@ -20,6 +20,9 @@ export default function ImageSlider({
   altPrefix = 'slide',
   aspectRatio = '16 / 10',
   transitionVariant = 'slide',
+  imageFit = 'contain',
+  imagePosition = 'center',
+  imageScale = 1,
 }) {
   const theme = useTheme();
   const controlBaseColor = theme.palette.mode === 'light'
@@ -53,7 +56,14 @@ export default function ImageSlider({
         exit: { opacity: 0, scale: 1.015 },
         transition: { duration: 0.45, ease: 'easeInOut' },
       }
-    : {
+    : transitionVariant === 'lift'
+      ? {
+          initial: { opacity: 0, y: 18, scale: 1.03 },
+          animate: { opacity: 1, y: 0, scale: 1 },
+          exit: { opacity: 0, y: -14, scale: 1.02 },
+          transition: { duration: 0.5, ease: 'easeInOut' },
+        }
+      : {
         initial: { opacity: 0, x: 50 },
         animate: { opacity: 1, x: 0 },
         exit: { opacity: 0, x: -50 },
@@ -84,7 +94,9 @@ export default function ImageSlider({
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain',
+                objectFit: imageFit,
+                objectPosition: imagePosition,
+                transform: `scale(${imageScale})`,
                 borderRadius: 36,
                 display: 'block',
                 margin: '0 auto',

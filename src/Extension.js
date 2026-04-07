@@ -127,7 +127,12 @@ const Extension = () => {
           ))}
         </Grid>
         <Grid container justifyContent="center" pt={{ xs: 1, md: 2 }}>
-          <ImageSlider />
+          <ImageSlider
+            transitionVariant="lift"
+            imageFit="cover"
+            imagePosition="left center"
+            imageScale={1.035}
+          />
         </Grid>
         <Grid container item justifyContent='center' spacing={1.5} sx={{ mt: '20px' }}>
           <Grid item xs={11} md={3}>
