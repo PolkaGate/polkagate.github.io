@@ -1,5 +1,6 @@
 import { Box, Stack, Grid, Link, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { ArrowUpward } from "@mui/icons-material";
 import React, { useCallback } from "react";
 import { SocialIcon } from "react-social-icons";
 import { MAX_WIDTH } from "./util/constants";
@@ -12,6 +13,10 @@ function Footer() {
       "_blank",
       "noopener,noreferrer"
     );
+  }, []);
+
+  const goToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
@@ -141,11 +146,45 @@ function Footer() {
             </Stack>
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{ fontSize: 12, textAlign: "center", pt: '18px', color: theme.palette.text.secondary }}>
-          © 2026 PolkaGate Foundation.{' '}
-          <Link href='https://github.com/PolkaGate/polkagate-extension/blob/main/Privacy%20Policy.md' color="inherit" underline="hover" target="_blank" rel="noopener noreferrer">
-            Privacy Policy
-          </Link>
+        <Grid item xs={12} sx={{ fontSize: 12, pt: '18px', color: theme.palette.text.secondary }}>
+          <Stack
+            direction={{ xs: 'column', md: 'row' }}
+            justifyContent="space-between"
+            alignItems={{ xs: 'center', md: 'center' }}
+            spacing={{ xs: 1.5, md: 2 }}
+          >
+            <Typography sx={{ fontSize: 12, textAlign: { xs: 'center', md: 'left' }, color: theme.palette.text.secondary }}>
+              © 2026 PolkaGate Foundation.{' '}
+              <Link href='https://github.com/PolkaGate/polkagate-extension/blob/main/Privacy%20Policy.md' color="inherit" underline="hover" target="_blank" rel="noopener noreferrer">
+                Privacy Policy
+              </Link>
+            </Typography>
+            <Box
+              component="button"
+              type="button"
+              onClick={goToTop}
+              sx={{
+                border: 'none',
+                backgroundColor: 'transparent',
+                color: theme.palette.text.primary,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 0.75,
+                cursor: 'pointer',
+                fontSize: '13px',
+                fontWeight: 600,
+                p: 0,
+                transition: 'opacity 0.2s ease, transform 0.2s ease',
+                '&:hover': {
+                  opacity: 0.72,
+                  transform: 'translateY(-1px)',
+                },
+              }}
+            >
+              <span>Back to top</span>
+              <ArrowUpward sx={{ fontSize: 16 }} />
+            </Box>
+          </Stack>
         </Grid>
       </Grid>
     </Grid>
