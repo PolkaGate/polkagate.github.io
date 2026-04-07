@@ -5,8 +5,8 @@ import { initBg } from "./bg.js";
 import { useEffect, useRef, useState } from "react";
 
 const texts = [
-  'The gateway to the polkadot ecosystem.',
-  'Supported by kusama treasury'
+  'The gateway to the Polkadot ecosystem',
+  'Supported by Kusama Treasury'
 ]
 
 const Polkagate = () => {
