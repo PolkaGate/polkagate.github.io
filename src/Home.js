@@ -89,6 +89,7 @@ function OverlaySection({ children, isActive, dimAmount = 0, zIndex, wrapperRef,
         zIndex,
         minHeight: desktopOverlayEnabled ? `${contentMetrics.height + OVERLAY_DISTANCE}px` : 'auto',
         pb: desktopOverlayEnabled ? `${OVERLAY_DISTANCE}px` : 0,
+        marginTop: '-1px'
       }}
     >
       <Box
