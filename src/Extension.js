@@ -27,14 +27,6 @@ const extensionBenefits = [
 const Extension = () => {
   const theme = useTheme();
 
-  const handleOpenFirefox = useCallback(() => {
-    window.open(
-      "https://addons.mozilla.org/en-US/firefox/addon/polkagate/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  }, []);
-
   const handleOpenChrome = useCallback(() => {
     window.open(
       "https://chrome.google.com/webstore/detail/polkagate/ginchbkmljhldofnbjabmeophlhdldgp",
@@ -189,23 +181,6 @@ const Extension = () => {
               Download for Brave
             </Button>
           </Grid>
-          {/* <Grid item xs={11} md={2.5}>
-          <Button
-            color="secondary"
-            variant="contained"
-            style={{ width: '100%', minWidth: 'max-content' }}
-            startIcon={
-              <Avatar
-                alt="plus"
-                src="images/firefox.png"
-                sx={{ width: 20, height: 20 }}
-              />
-            }
-            onClick={handleOpenFirefox}
-          >
-            Download for Firefox (old version)
-          </Button>
-        </Grid> */}
         </Grid>
       </Grid >
     </Grid >

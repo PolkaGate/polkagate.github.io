@@ -9,10 +9,7 @@ import { formatBalance, isString } from '@polkadot/util';
 import { FLOATING_POINT_DIGIT } from '../util/constants';
 
 // for million, 2 * 3-grouping + comma
-const M_LENGTH = 6 + 1;
 const K_LENGTH = 3 + 1;
-
-type LabelPost = string | React.ReactNode
 
 function getFormat(decimals, tokens, formatIndex = 0) {
   return [

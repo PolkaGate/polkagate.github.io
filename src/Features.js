@@ -1,11 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import React from "react";
-import {
-  CenterFocusWeak as CenterFocusWeakIcon,
-  AutoAwesome as AutoAwesomeIcon,
-  Api as ApiIcon,
-} from "@mui/icons-material";
 
 function Features() {
   const theme = useTheme();
