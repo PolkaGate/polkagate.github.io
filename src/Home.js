@@ -170,22 +170,22 @@ const Home = () => {
       let nextActive = -1;
       const nextDimLevels = Array(6).fill(0);
 
-      for (let i = 0; i < sentinelRefs.length; i++) {
+      for (let i = 0; i < sectionRefs.length; i++) {
         if (!overlayEnabled[i]) {
           continue;
         }
 
-        const sentinel = sentinelRefs[i].current;
         const wrapper = sectionRefs[i].current;
 
-        if (!sentinel || !wrapper) {
+        if (!wrapper) {
           continue;
         }
 
-        const sentinelTop = sentinel.getBoundingClientRect().top + scrollTop;
         const wrapperTop = wrapper.getBoundingClientRect().top + scrollTop;
+        const contentHeight = wrapper.firstElementChild?.offsetHeight || wrapper.offsetHeight;
+        const triggerY = wrapperTop + contentHeight - viewportHeight;
 
-        if (sentinelTop <= scrollTop + viewportHeight - 24 && wrapperTop <= scrollTop) {
+        if (scrollTop >= triggerY && wrapperTop <= scrollTop) {
           nextActive = i;
         }
       }
